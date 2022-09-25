@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { List } from "./List";
+import "./Todo.css";
 export class ToDoList extends Component{
     constructor(props){
         super(props);
@@ -36,18 +37,19 @@ export class ToDoList extends Component{
           <>
             <div>
               <form>
-                <div>
+                <div className="container">
                   <input
+                  className="input"
                     onChange={this.onChangeHandler}
                     type="text"
                     value={this.state.term}
                     placeholder="enter term"
                   />
-                  <button onClick={this.onFormHandler}>Add Item</button>
+                  <button className="Add-item" onClick={this.onFormHandler}>Add Item</button>
                 </div>
               </form>
             </div>
-            <List deleteTask={this.onDeleteHandle}  items={this.state.items} />
+            <List  deleteTask={this.onDeleteHandle}  items={this.state.items} />
           </>
         );
     }
