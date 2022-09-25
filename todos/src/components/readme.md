@@ -1,1 +1,1 @@
-<img scr=".\img\ToDoList.png" alt="">
+<img scr="\img\ToDoList.png" alt="">
