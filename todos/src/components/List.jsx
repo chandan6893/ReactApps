@@ -5,11 +5,16 @@ export class List extends Component{
           <>
             <span className="listItem">
               {this.props.items.map((item, index) => (
-                <div 
+                <div
                   key={index}
                   onClick={this.props.deleteTask.bind(this, index)}
                 >
-                  {item}
+                  {
+                    <h4 className="clickItem">
+                      <p>item</p>
+                      <button>Delete</button>
+                    </h4>
+                  }
                 </div>
               ))}
             </span>
