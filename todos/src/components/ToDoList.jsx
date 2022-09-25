@@ -15,6 +15,14 @@ export class ToDoList extends Component{
         })
     }
 
+    onDeleteHandle = index =>{
+        const deleteTask = [...this.state.items];
+        deleteTask.splice(index,1);
+        this.setState({
+            items:deleteTask
+        });
+    }
+
     onFormHandler = (event) =>{
         event.preventDefault();
         this.setState({
@@ -39,7 +47,7 @@ export class ToDoList extends Component{
                 </div>
               </form>
             </div>
-            <h3 deleteTask={this.onDeleteHandle}  items={this.state.items}></h3>
+            <List deleteTask={this.onDeleteHandle}  items={this.state.items} />
           </>
         );
     }
