@@ -21,6 +21,8 @@ export class Form extends Component {
     // console.log(event.target.value);
     this.setState({
       password:event.target.value,
+    },()=>{
+      console.log(this.state.password)
     })
    }
 
