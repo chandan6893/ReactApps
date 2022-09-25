@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { List } from "./List";
 export class ToDoList extends Component{
     constructor(props){
         super(props);
@@ -38,6 +39,7 @@ export class ToDoList extends Component{
                 </div>
               </form>
             </div>
+            <h3 deleteTask={this.onDeleteHandle}  items={this.state.items}></h3>
           </>
         );
     }
