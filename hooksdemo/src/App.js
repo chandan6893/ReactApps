@@ -1,6 +1,7 @@
 import { CountClass } from "./components/CountClass";
 import { CountHooks } from "./components/CountHooks";
 import { CounterHooks } from "./components/CounterHooks"
+import { StateWithObject } from "./components/StateWithObject";
 
 export function App() {
   return (
@@ -8,6 +9,7 @@ export function App() {
     <CountClass />
     <CountHooks />
     <CounterHooks />
+    <StateWithObject />
     </>
   )
 }
