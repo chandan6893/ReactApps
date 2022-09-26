@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { LifeCycle } from './Components/LifeCycle';
+import { TitleChange } from './Components/TitleChange';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -11,6 +12,7 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     <LifeCycle />
+    <TitleChange />
   </React.StrictMode>
 );
 

@@ -3,6 +3,7 @@ import { CountHooks } from "./components/CountHooks";
 import { CounterHooks } from "./components/CounterHooks"
 import { StateWithObject } from "./components/StateWithObject";
 import { StateWithArray } from "./components/StateWithArray"
+// import { TitleChange } from "./components/TitleChange";
 
 export function App() {
   return (
@@ -12,6 +13,7 @@ export function App() {
     <CounterHooks />
     <StateWithObject />
     <StateWithArray />
+    {/* <TitleChange /> */}
     </>
   )
 }
