@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-export class TitleChange extends Component {
+import "./titleChange.css";
+export class TitleChangeClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,9 +24,11 @@ export class TitleChange extends Component {
   render() {
     return (
       <>
-        <span>Count :{this.state.count}</span>
+        <div className="titleChangeClass">
+          <span>Count :{this.state.count}</span>
 
-        <button onClick={this.handleClick}>TitleChange</button>
+          <button onClick={this.handleClick}>TitleChangeClass</button>
+        </div>
       </>
     );
   }

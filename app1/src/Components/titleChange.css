@@ -1,0 +1,22 @@
+.titleChangeClass{
+  border: 2px solid greenyellow;
+  height: 5rem;
+  width: 8rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+.lifeCycle{
+   border: 2px solid black;
+  height: 12rem;
+  width: 8rem;
+  text-align: center; 
+  padding: 1rem;
+}
+.titleChangeHooks{
+ border: 2px solid tomato;
+  height: 6rem;
+  width: 8rem;
+  text-align: center; 
+  margin-top: 3rem;
+}
+ 

@@ -3,19 +3,19 @@ export class TitleChange extends Component{
     constructor(props){
         super(props);
         this.state = {
-            coount:0,
+            count:0,
         }
     }
 
     handleClick = () =>{
-        this.setState({count:this.state.coount + 1});
+        this.setState({count:this.state.count + 1});
         
     }
    
     render(){
         return (
           <>
-            <span>Count :{this.state.coount}</span>
+            <span>Count :{this.state.count}</span>
             
             <button onClick={this.handleClick}>TitleChange</button>
           </>
