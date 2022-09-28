@@ -5,14 +5,19 @@ import { useEffect } from "react";
  function UseEffectsCheck (){
     const [count, setCount] = useState(0);
 
-    // const change =() =>{
+    // const change = () =>{
     //     console.log("in change")
     //     setCount(count + 1);
     // };
 
     // useEffect(()=>{
     //     console.log("in Effect");
-    //     setInterval(change,2000);
+    //    let data = setInterval(change,1000);
+
+    //    return ()=>{
+    //     clearInterval(data);
+    //    };
+    // //    this return part is==> componentWillUnmount or cleanup
     // },[count]);
 
     const change= () => {
@@ -22,10 +27,16 @@ import { useEffect } from "react";
 
     useEffect(() => {
         console.log("in Effect");
-        setInterval(change,1000)
-
+       let data = setInterval(change,1000);
+// whenever we use setInterval,setTimeout,API call,Any DOM Changes please clear it in return Statement like below
+// otherwise we will run out of memory
+        return () => {
+          clearInterval(data);
+        };
+// this return part is==> componentWillUnmount or cleanup
     },[])
 
+   
     return(
         <>
         <div>
