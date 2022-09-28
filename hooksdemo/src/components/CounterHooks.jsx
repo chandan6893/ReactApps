@@ -15,7 +15,7 @@ export function CounterHooks(){
     } ;
     
     const handleDecrement = (x) =>{
-        setCount(count + x)
+        setCount(count - x)
     }
     
 

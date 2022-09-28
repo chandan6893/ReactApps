@@ -9,7 +9,7 @@ export function TitleChangeHooks(){
 
     // for the first time load (first rendering) useEffect wiil get called.
 
-    // FOR EACH RE-RENDERING PROCESS useEffect() get called.  
+    // FOR EACH RE-RENDERING PROCESS , useEffect() get called.  
    },[count]);
 
    useEffect(()=>{
