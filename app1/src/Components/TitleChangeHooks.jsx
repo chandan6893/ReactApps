@@ -3,14 +3,14 @@ export function TitleChangeHooks(){
    const [count, setCount] = useState(0);
    const [name, setName]   = useState();
 
-   useEffect(() =>{
-    console.log("count Changed")
-    document.title = `${count} times clicked`;
+   useEffect(() => {
+     console.log("count Changed");
+     document.title = `${count} times clicked`;
 
-    // for the first time load (first rendering) useEffect wiil get called.
+     // for the first time load (first rendering) useEffect wiil get called.
 
-    // FOR EACH RE-RENDERING PROCESS , useEffect() get called.  
-   },[count]);
+     // FOR EACH RE-RENDERING PROCESS , useEffect() get called.
+   }, [count]);
 
    useEffect(()=>{
     console.log("name Changed")

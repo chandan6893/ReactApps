@@ -10,10 +10,12 @@ export class TitleChangeClass extends Component {
 
   componentDidMount(){
     document.title = `${this.state.count} Times Clicked`
+    console.log(document.title);
   }
 
   componentDidUpdate(){
     document.title = `${this.state.count} Times Clicked`
+    console.log(document.title);
   }
 
   handleClick = () => {
