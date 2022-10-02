@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+     list-style-type: none;
+     margin-top: 2.2rem;
+     font-family:Arial, Helvetica, sans-serif;
+     font-size: x-large;
+     font-weight: 600;
+     
+}
+.container0{
+    border: 2px solid salmon ;
+    height: 8rem;
+    width: 14rem;
+    text-align: center;
+    background-color:red;
+    border-radius: 0.7rem;
+}
+.container1{
+    border: 2px solid salmon ;
+    height: 8rem;
+    width: 14rem;
+    text-align: center;
+    background-color:lightsteelblue;
+    border-radius: 0.7rem;
+}
+.container2{
+    border: 2px solid salmon ;
+    height: 8rem;
+    width: 14rem;
+    text-align: center;
+    background-color:lightyellow;
+    border-radius: 0.7rem;
+}
+.container3{
+    border: 2px solid salmon ;
+    height: 8rem;
+    width: 14rem;
+    text-align: center;
+    background-color:limegreen;
+    border-radius: 0.7rem;
+}
+.container4{
+    border: 2px solid salmon ;
+    height: 8rem;
+    width: 14rem;
+    text-align: center;
+    background-color:lightcoral;
+    border-radius: 0.7rem;
+}
+.container5{
+    border: 2px solid salmon ;
+    height: 8rem;
+    width: 14rem;
+    text-align: center;
+    background-color:lightseagreen;
+    border-radius: 0.7rem;
+}
+
+.sectOne{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    gap: 12rem;
+}
+.covTrack{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: lightblue;
+}

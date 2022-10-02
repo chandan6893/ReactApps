@@ -5,8 +5,9 @@ import './App.css';
 // import { DataFetch } from './components/DataFetch';
 // import { DataFetchTwo } from './components/DataFetchTwo';
 // import { DataFetchFilter } from "./components/DataFetchFilter";
-import { ComponentA } from './components/ComponentA';
 
+
+import { ComponentA } from './components/ComponentA';
 export const NameContext = React.createContext();
 export const AgeContext = React.createContext();
 
