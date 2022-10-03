@@ -5,19 +5,39 @@ import "./CovidApp.css";
 
 export function CovidApp (){
     const [datas, setDatas] = useState({});
+    const [items,setItems] =useState([]);
 
     useEffect(() =>{
         axios.get("https://disease.sh/v3/covid-19/all").then((response) => {
-          console.log(response.data);
+        //   console.log(response.data);
           setDatas({...response.data});
         });
            
     },[]);
 
+
+    useEffect(() => {
+      axios.get(`https://disease.sh/v3/covid-19/countries`).then((response) => {
+        console.log(response.data);
+        setItems({ ...response.data });
+      });
+    }, []);
+
     return (
       <>
         <div className="covTrack">
           <h2>COVID19 TRACKER</h2>
+
+          <section>
+            <article>
+              <div>
+               {
+                
+               }
+                
+              </div>
+            </article>
+          </section>
         </div>
         <section className="sectOne">
           <article className="firstArticle">
