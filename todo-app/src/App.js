@@ -4,29 +4,56 @@ import './App.css';
 function App() {
   const [todo, setTodo] = useState("");
   const [todos,setTodos]= useState([]);
+  const [editId,setEditId] = useState(0);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
+
+    if(editId){
+      const editTodo = todos.find((i) => i.id === editId);
+      const updatedTodos = todos.map((t) => 
+      t.id === editTodo.id ? (t = { id: t.id, todo }) : { id: t.id, todo: t.todo }
+      );
+      setTodos(updatedTodos);
+      setEditId(0);
+      setTodo("");
+      return;
+    }
     
     if(todo !== ""){
       setTodos([...todos,{ id: `${todo} - ${Date.now()}`, todo }]);
+      setTodo("");
     }
   }
+
+
+  const handleDelete = (id) => {
+    const delTodo = todos.filter((filt) => filt.id !== id);
+    setTodos([...delTodo]);
+  };
+
+  const handleEdit = (id) => {
+    const editTodo = todos.find((i) => i.id === id);
+    setTodo(editTodo.todo);
+    setEditId(id);
+  }
+
+
   return (
     <div className="App">
       <div className="container">
         <h1>ToDo App</h1>
         <form className="todoForm" onSubmit={handleSubmit}>
-          <input type="text" onChange={(e) => setTodo(e.target.value)} />
-          <button type="submit">Add</button>
+          <input type="text" value={todo} onChange={(e) => setTodo(e.target.value)} />
+          <button type="submit"> {editId ? "Save" : "Add"}</button>
         </form>
 
         <ul className="allTodos">
           {todos.map((t) => (
             <li className="singleTodo">
-              <span className="todoText">Learning React</span>
-              <button>Edit</button>
-              <button>Delete</button>
+              <span className="todoText" key={t.id}>{t.todo}</span>
+              <button onClick={() => handleEdit(t.id)}>Edit</button>
+              <button onClick={() => handleDelete(t.id)}>Delete</button>
             </li>
           ))}
         </ul>
