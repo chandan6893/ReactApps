@@ -18,6 +18,22 @@
   font-size: calc(10px + 2vmin);
   color:#61dafb;
 }
+.todoForm{
+  width: 31rem;
+  display: flex;
+  justify-content: space-around;
+}
+.todoForm input{
+  width: 80%;
+  border: none;
+  border-radius: 9px;
+}
+button{
+  border: none;
+  border-radius: 10px;
+  margin: 5px 5px;
+  padding: 10px;
+}
 
 
 
