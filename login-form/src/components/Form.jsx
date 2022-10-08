@@ -10,7 +10,7 @@ export function Form(){
 
   const submitForm = (e) =>{
     e.preventDefault();
-    const currentEntry = {userName , password};
+    const currentEntry = {userName:userName ,password: password};
     setSubmit([...submit, currentEntry]);
   }
 
@@ -33,8 +33,18 @@ export function Form(){
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" className="submitButton" >Login</button>
+          <button type="submit" className="submitButton">
+            Login
+          </button>
         </form>
+
+        <div className="welcomePage">
+          {submit.map((namePwd) => (
+            <div>
+              <h3>Welcome :{namePwd.userName}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     );
 }
