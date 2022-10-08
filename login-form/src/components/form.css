@@ -2,19 +2,50 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 .form{
-    border: 1px solid pink;
-    width: 20%;
+    border: none;
+    border-radius: 15px;
+    background-color:lightskyblue;
+    padding: 2rem;
+    width: 30%;
     height: 18rem;
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
     justify-content: center;
     margin: 13rem 0;
+}
+
+.inputA{
+padding: 6px;
+border: none;
+border-radius: 6px;
+background-color:limegreen;
+color: black;
+font-size: x-large;
+font-weight: 500;
+}
+
+.inputB{
+  margin-top:1rem ;
+  margin-bottom: 3rem;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color:limegreen;
+  color: black;
+  font-size: x-large;
+  font-weight: 500;
+  }
+
+.submitButton{
+  padding: 6px;
+  margin: 0 5rem;
+  border: none;
+  border-radius: 8px;
+  background-color:limegreen;
+  font-size: x-large;
+  font-weight: 500;
 }
