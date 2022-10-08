@@ -22,7 +22,7 @@
 padding: 6px;
 border: none;
 border-radius: 6px;
-background-color:limegreen;
+/* background-color:limegreen; */
 color: black;
 font-size: x-large;
 font-weight: 500;
@@ -34,7 +34,7 @@ font-weight: 500;
   padding: 6px;
   border: none;
   border-radius: 6px;
-  background-color:limegreen;
+  /* background-color:limegreen; */
   color: black;
   font-size: x-large;
   font-weight: 500;
@@ -45,7 +45,8 @@ font-weight: 500;
   margin: 0 5rem;
   border: none;
   border-radius: 8px;
-  background-color:limegreen;
+  background-color:#282c34;
+  color: beige;
   font-size: x-large;
   font-weight: 500;
 }

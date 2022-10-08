@@ -4,26 +4,34 @@ import "./form.css";
 
 export function Form(){
 
-  const [id, setId] = useState("");
-  const [pwd,setPwd] = useState("");
-  const [submit, setSubmit] = useState();
+  const [userName, setUserName] = useState("");
+  const [password,setPassword] = useState("");
+  const [submit, setSubmit] = useState([]);
+
+  const submitForm = (e) =>{
+    e.preventDefault();
+    const currentEntry = {userName , password};
+    setSubmit([...submit, currentEntry]);
+  }
 
     return (
       <div className="container">
-        <form className="form">
+        <form className="form" onSubmit={submitForm}>
           <input
             className="inputA"
             type="text"
             placeholder="UserName...."
-            value={id}
-            onChange={(e) => setId(console.log(e.target.value))}
+            autoComplete="off"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
           />
           <input
             className="inputB"
             type="password"
             placeholder="Password...."
-            value={pwd}
-            onChange={(e) => setPwd(e.target.value)}
+            autoComplete="off"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" className="submitButton" >Login</button>
         </form>
