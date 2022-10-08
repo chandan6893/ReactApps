@@ -5,11 +5,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  flex-wrap: wrap;
   
 }
 .container{
-  height: 90vh;
+  height: auto  ;
   border: 2px solid greenyellow;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@
   padding: 20px;
   font-size: calc(10px + 2vmin);
   color:#61dafb;
+  
 }
 .todoForm{
   width: 31rem;
@@ -27,6 +28,7 @@
   width: 80%;
   border: none;
   border-radius: 9px;
+  
 }
 button{
   border: none;
