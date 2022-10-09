@@ -12,6 +12,7 @@ export function Form(){
     e.preventDefault();
     const currentEntry = {userName:userName ,password: password};
     setSubmit([...submit, currentEntry]);
+    
   }
 
     return (
@@ -40,11 +41,17 @@ export function Form(){
 
         <div className="welcomePage">
           {submit.map((namePwd) => (
-            <div>
+            <div >
               <h3>Welcome :{namePwd.userName}</h3>
             </div>
           ))}
         </div>
+
+
+
+        {/* ********************************xxxxxxxxxxxxxxxxx************** */}
+
+        
       </div>
     );
 }
