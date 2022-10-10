@@ -1,4 +1,5 @@
 import React,{ useState } from "react";
+import Welcome from "./Welcome"
 
 import "./form.css";
 
@@ -6,18 +7,20 @@ export function Form(){
 
   const [userName, setUserName] = useState("");
   const [password,setPassword] = useState("");
-  const [submit, setSubmit] = useState([]);
+  const [user, setUser] = useState(null);
+  
 
   const submitForm = (e) =>{
     e.preventDefault();
     const currentEntry = {userName:userName ,password: password};
-    setSubmit([...submit, currentEntry]);
+    setUser( currentEntry);
     
   }
 
     return (
       <div className="container">
-        <form className="form" onSubmit={submitForm}>
+       { !user?.userName ?
+         <form className="form" onSubmit={submitForm}>
           <input
             className="inputA"
             type="text"
@@ -37,15 +40,10 @@ export function Form(){
           <button type="submit" className="submitButton">
             Login
           </button>
-        </form>
+        </form> :<Welcome user={user}  />
 
-        <div className="welcomePage">
-          {submit.map((namePwd) => (
-            <div >
-              <h3>Welcome :{namePwd.userName}</h3>
-            </div>
-          ))}
-        </div>
+       
+       }
 
 
 
