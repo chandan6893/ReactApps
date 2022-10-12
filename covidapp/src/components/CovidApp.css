@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.cov-title{
+    color: red;
+    margin-bottom:5px;
+}
 ul {
      list-style-type: none;
      margin-top: 2.2rem;

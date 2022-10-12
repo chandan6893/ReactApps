@@ -6,7 +6,7 @@ function About() {
     <div className="comman">
       <h1>About</h1>
       <Link to="/about/1">content 1</Link>
-      <Link to="/about/2">content 2</Link>
+      <Link to="/about/abcd&ABCD">content 2</Link>
     </div>
   );
 }

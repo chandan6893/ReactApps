@@ -8,7 +8,8 @@ export function CovidApp (){
     const [items,setItems] =useState([]);
 
     useEffect(() =>{
-        axios.get("https://disease.sh/v3/covid-19/all").then((response) => {
+        axios.get("https://disease.sh/v3/covid-19/all")
+        .then((response) => {
         //   console.log(response.data);
           setDatas({...response.data});
         });
@@ -26,15 +27,14 @@ export function CovidApp (){
     return (
       <>
         <div className="covTrack">
-          <h2>COVID19 TRACKER</h2>
+          <h2 className="cov-title">COVID19 TRACKER</h2>
 
           <section>
             <article>
               <div>
-               {
-                
-               }
-                
+                <ul>
+                  <li>{items.country}</li>
+                </ul>
               </div>
             </article>
           </section>
