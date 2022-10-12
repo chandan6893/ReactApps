@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div>About</div>
-  )
+    <div className="comman">
+      <h1>About</h1>
+      <Link to="/about/1">content 1</Link>
+      <Link to="/about/2">content 2</Link>
+    </div>
+  );
 }
 
 export default About

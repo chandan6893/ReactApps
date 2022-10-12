@@ -3,15 +3,20 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <ul>
+    <ul className="H-A-C">
       <li>
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
+        {/* in place of href="", Link uses to="" */}
       </li>
       <li>
-        <Link>About</Link>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <Link>Contact</Link>
+        <Link to="/contact">Contact</Link>
+      </li>
+
+      <li>
+        <Link to="/content">Content</Link>
       </li>
     </ul>
   );
