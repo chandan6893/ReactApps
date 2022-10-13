@@ -1,0 +1,33 @@
+.parent-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 40%;
+  height: 10%;
+}
+.container h2{
+  text-align: center;
+}
+.content{
+   margin: 3rem 3rem;
+ }
+
+.content .images{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 100%;
+  margin-left: 38px;
+}
+ul{
+  list-style: none;
+  display: flex;
+  margin-left: 1px;
+}
+ul li{
+  
+}
