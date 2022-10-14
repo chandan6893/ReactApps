@@ -1,23 +1,33 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
+import { Details } from './Details';
 
 export function List(props) {
     const {people}= props;
     // console.log(people);
     const [items, setItems] = useState(people);
-   
+   useEffect(()=>{
+    setItems(people)
+   },[people])
     // console.log(items);
     const handleDelete = (id) =>{
       const x =items.filter((i)=>{
-        console.log(i,i.id,id);
+        // console.log(i,i.id,id);
         return i.id !== id ;
       });
       setItems(x);
       // console.log(x)
     }
+
+    const handleDetails = (id) =>{
+
+    }
+
   return (
     <div>
       {items.map((person) => (
+        <div>
         <section className='SectOne'>
           <article className="content" key={person.id}>
             <img className="images" src={person.image} alt="" />
@@ -27,8 +37,25 @@ export function List(props) {
             </ul>
           </article>
           <button className='buttonTwo' onClick={ ()=> handleDelete(person.id)} >Delete</button>
+          <button className='buttonThree' onClick= {()=> handleDetails(person.id)}>Details</button>
         </section>
+        
+        {/* <section className='details'>
+          <ul>
+            <li>name</li>
+            <li>age</li>
+          </ul>
+        </section> */}
+        <Details />
+        
+
+        </div>
+        
+      
+
+
       ))}
+      
     </div>
   );
 }
