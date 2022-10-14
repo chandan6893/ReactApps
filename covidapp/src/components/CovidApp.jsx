@@ -33,7 +33,7 @@ export function CovidApp (){
             <article>
               <div>
                 <ul>
-                  <li>{items.country}</li>
+                  <li>{items[0]?.country}</li>
                 </ul>
               </div>
             </article>

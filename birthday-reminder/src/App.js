@@ -15,7 +15,7 @@ function App() {
         <div className="container">
           <h2>BirthDays Today</h2>
           <List people={people} />
-          <button onClick={()=> setPeople([])} >Clear All</button>
+          <button onClick={()=> setPeople([])} className="button" >Clear All</button>
         </div>
       </div>
     </>

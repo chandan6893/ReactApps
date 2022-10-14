@@ -1,10 +1,11 @@
 import React from 'react';
 
-export function List({people}) {
+export function List(props) {
+    const {people}= props;
   return (
     <div>
-        {people.map((person) => {
-            return(
+        {people.map((person) => 
+          (
                 <article className='content' key={person.id}>
                     <img className='images' src={person.image} alt="" />
                     <ul className='name-age'>
@@ -13,7 +14,7 @@ export function List({people}) {
                     </ul>
                 </article>
             )
-        })}
+        )}
     </div>
   )
 }
