@@ -17,6 +17,25 @@ margin: 4rem 0;
 }
 .content{
    margin: 3rem 3rem;
+   /* display: flex; */
+
+ }
+ .SectOne{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ }
+ .buttonTwo{
+  padding: 6px;
+  height: 26px;
+  width: 50px;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: tomato;
+  border: none;
+  border-radius: 16px;
+  color: aliceblue;
+
  }
 
 .content .images{
