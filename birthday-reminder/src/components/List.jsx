@@ -7,6 +7,7 @@ export function List(props) {
     const {people}= props;
     // console.log(people);
     const [items, setItems] = useState(people);
+    const [details,setDetails] =useState();
    useEffect(()=>{
     setItems(people)
    },[people])
@@ -21,6 +22,19 @@ export function List(props) {
     }
 
     const handleDetails = (id) =>{
+      // console.log(id)
+      const x = items.filter((i) => {
+        console.log(i,i.id,id);
+       
+        return i.id === id;
+        
+      });
+      
+      setDetails(x[0]);
+      // setDetails("")
+     
+      // console.log(details);
+
 
     }
 
@@ -46,7 +60,7 @@ export function List(props) {
             <li>age</li>
           </ul>
         </section> */}
-        <Details />
+        {details? (<Details detail={details} />) :("")}
         
 
         </div>
