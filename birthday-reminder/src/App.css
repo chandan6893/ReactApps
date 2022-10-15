@@ -7,7 +7,9 @@ margin: 4rem 0;
 .container{
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid rgb(207, 146, 146);
+  
+  border-radius: 10px;
   width: 40%;
   height: 10%;
   background-color: lightgreen;

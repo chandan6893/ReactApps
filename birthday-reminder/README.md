@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## outputImage
+<img src=".\birthday-reminder\src\components\Web capture_15-10-2022_14367_localhost.jpeg" alt="">
+<img src="\birthday-reminder\src\components\Web capture_15-10-2022_143329_localhost.jpeg" alt="">
+<img src="birthday-reminder\src\components\Web capture_15-10-2022_143329_localhost.jpeg" alt="">
 ## Available Scripts
 
 In the project directory, you can run:

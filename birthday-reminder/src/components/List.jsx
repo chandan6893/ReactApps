@@ -13,6 +13,7 @@ export function List(props) {
    },[people])
     // console.log(items);
     const handleDelete = (id) =>{
+      console.log(id)
       const x =items.filter((i)=>{
         // console.log(i,i.id,id);
         return i.id !== id ;
@@ -24,16 +25,17 @@ export function List(props) {
     const handleDetails = (id) =>{
       // console.log(id)
       const x = items.filter((i) => {
-        console.log(i,i.id,id);
+        // console.log(i,i.id,id);
        
         return i.id === id;
         
       });
       
       setDetails(x[0]);
-      // setDetails("")
      
-      // console.log(details);
+    //  console.log(x[0])
+     
+      
 
 
     }
@@ -42,34 +44,33 @@ export function List(props) {
     <div>
       {items.map((person) => (
         <div>
-        <section className='SectOne'>
-          <article className="content" key={person.id}>
-            <img className="images" src={person.image} alt="" />
-            <ul className="name-age">
-              <li>{person.name},</li>
-              <li>{person.age}</li>
-            </ul>
-          </article>
-          <button className='buttonTwo' onClick={ ()=> handleDelete(person.id)} >Delete</button>
-          <button className='buttonThree' onClick= {()=> handleDetails(person.id)}>Details</button>
-        </section>
-        
-        {/* <section className='details'>
-          <ul>
-            <li>name</li>
-            <li>age</li>
-          </ul>
-        </section> */}
-        {details? (<Details detail={details} />) :("")}
-        
+          <section className="SectOne">
+            <article className="content" key={person.id}>
+              <img className="images" src={person.image} alt="" />
+              <ul className="name-age">
+                <li>{person.name},</li>
+                <li>{person.age}</li>
+              </ul>
+            </article>
+            <button
+              className="buttonTwo"
+              onClick={() => handleDelete(person.id)}
+            >
+              Delete
+            </button>
+            <button
+              className="buttonThree"
+              id={person.id}
+              onClick={() => handleDetails(person.id)}
+            >
+              Details
+            </button>
+          </section>
 
+          {/* {details? (<Details detail={details} />) :("")} */}
+          {details && details.id === person.id && <Details detail={details} />}
         </div>
-        
-      
-
-
       ))}
-      
     </div>
   );
 }
