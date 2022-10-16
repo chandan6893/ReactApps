@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function SideBar({ text }) {
+  console.log("prop",text)
   // here we r accessing the props from App.jsx
   return (
     <>

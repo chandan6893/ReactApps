@@ -5,9 +5,10 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Content from "./components/Content"
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import {Header} from './components/Header';
 import SideBar from './components/SideBar';
 import ErrorPage from './components/ErrorPage';
+import New from "./components/New"
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       {/* and we want to render Sidebar on only some page then we have to remove * from path and
       replace it wth it another path like home/contact like Below */}
 
-{/* OR  */}
+      {/* OR  */}
 
       <Routes>
         <Route path="/about" element={<SideBar text="about" />} />
@@ -28,15 +29,24 @@ function App() {
 
       <Routes>
         <Route path="/contact" element={<SideBar text="contact" />} />
-    {/* inside/through element we can pass props */}
+        {/* inside/through element we can pass props */}
       </Routes>
 
       <Header />
       <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<About />} path="/about" />
+        <Route path="/" element={<Home />} />
+
+        <Route path="/about">
+          <Route index element={<About />} />
+          {/* here index represents =>/about in line no39 and in line 41 path =":id " === path="/about:id"  */}
+          <Route path=":id" element={<Content />} />
+          <Route path="new" element={<New />} />
+        </Route>
+        {/* <Route element={<About />} path="/about" />
+        <Route element={<Content />} path="/about/:id" /> */}
+
         <Route element={<Contact />} path="/contact" />
-        <Route element={<Content />} path="/about/:id" />
+
         <Route path="*" element={<ErrorPage />} />
         {/* in line no 18, anything after colon(:) is dynamic, whatever we write after the : , it will render the { Content } component every time only */}
         {/* in path="/aboout/",if we write anything after about/ i.e (/) ,it will be considered as id . */}

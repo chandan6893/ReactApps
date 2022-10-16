@@ -1,18 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,NavLink } from 'react-router-dom'
 
-export default function Header() {
+export  function Header() {
   return (
     <ul className="H-A-C">
       <li>
-        <Link to="/">Home</Link>
+        <NavLink to="/">Home</NavLink>
         {/* in place of href="", Link uses to="" */}
       </li>
       <li>
-        <Link to="/about">About</Link>
+          <NavLink to="/about"  className={({ isActive })=> (isActive ? "active-link" : "")} >
+            {/* active-link, is the name of class */}
+            About
+          </NavLink>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <NavLink to="/contact">Contact</NavLink>
       </li>
 
       <li>
