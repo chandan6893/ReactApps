@@ -23,11 +23,12 @@ function App() {
 {/* OR  */}
 
       <Routes>
-        <Route path="/" element={<SideBar />} />
+        <Route path="/about" element={<SideBar text="about" />} />
       </Routes>
 
       <Routes>
-        <Route path="contact" element={<SideBar />} />
+        <Route path="/contact" element={<SideBar text="contact" />} />
+    {/* inside/through element we can pass props */}
       </Routes>
 
       <Header />
