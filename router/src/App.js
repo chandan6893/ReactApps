@@ -24,7 +24,9 @@ function App() {
       {/* OR  */}
 
       <Routes>
-        <Route path="/about" element={<SideBar text="about" />} />
+        <Route path="/about/*" element={<SideBar text="about" />} />
+        {/* (   remove and add , /* ,after /about and observe  ) and('/*',means anything that comes
+        after /about , will take us to the SideBar) */}
       </Routes>
 
       <Routes>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
 
 function SideBar({ text }) {
   console.log("prop",text)
@@ -10,8 +10,18 @@ function SideBar({ text }) {
         <h2>SideBar</h2>
         {text === "about" ? (
           <p>
-            <Link to="/about/1">content 1</Link>
-            <Link to="/about/2">content 2</Link>
+            <NavLink
+              to="/about/1"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              content 1
+            </NavLink>
+            <NavLink
+              to="/about/2"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              content 2
+            </NavLink>
           </p>
         ) : (
           <>
