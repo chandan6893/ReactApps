@@ -20,6 +20,8 @@ function App() {
       {/* and we want to render Sidebar on only some page then we have to remove * from path and
       replace it wth it another path like home/contact like Below */}
 
+{/* OR  */}
+
       <Routes>
         <Route path="/" element={<SideBar />} />
       </Routes>
