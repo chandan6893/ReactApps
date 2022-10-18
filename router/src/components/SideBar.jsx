@@ -2,8 +2,8 @@ import React from 'react'
 import { Link,NavLink } from 'react-router-dom';
 
 function SideBar({ text }) {
-  console.log("prop",text)
-  // here we r accessing the props from App.jsx
+  // console.log("prop",text)
+  // here we r accessing the props from App.js
   return (
     <>
       <div className="sidebar">

@@ -5,7 +5,7 @@ const initialState = {
     name  : "Abhishek",
 };
 const reducer = (state, action) => {
-    console.log(action);
+    // console.log(action);
   switch (action.type) {
     case "INCREMENT":
       return {...state, value:state.value + action.value};

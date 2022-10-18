@@ -9,6 +9,8 @@ import  Data  from "./components/Data";
 function App() {
 
   const [people, setPeople] = useState(Data);
+  // console.log(people);
+  // console.log(Data)
   return (
     <>
       <div className="parent-container">

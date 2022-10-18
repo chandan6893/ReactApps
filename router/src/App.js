@@ -13,9 +13,9 @@ import New from "./components/New"
 function App() {
   return (
     <>
-      {/* <Routes>
-        <Route path="*" element={<SideBar />} />
-      </Routes> */}
+      <Routes>
+        {/* <Route path="*" element={<SideBar />} /> */}
+      </Routes>
       {/* note:- if we give path ="*" sidebar elemend will be rendered in every page i.e 
       Home,About,Contact and page is not found even then sidebar will render like Above */}
       {/* and we want to render Sidebar on only some page then we have to remove * from path and
@@ -35,17 +35,18 @@ function App() {
       </Routes>
 
       <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
 
         <Route path="/about">
           <Route index element={<About />} />
-          {/* here index represents =>/about in line no39 and in line 41 path =":id " === path="/about:id"  */}
+          {/* here index represents =>/about in line no43 and in line 45 path =":id " === path="/about:id"  */}
           <Route path=":id" element={<Content />} />
           <Route path="new" element={<New />} />
         </Route>
-        {/* <Route element={<About />} path="/about" />
-        <Route element={<Content />} path="/about/:id" /> */}
+        {/* <Route element={<About   />} path="/about" />
+            <Route element={<Content />} path="/about/:id" /> */}
 
         <Route element={<Contact />} path="/contact" />
 
