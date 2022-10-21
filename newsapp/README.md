@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-![The San Juan Mountains are beautiful!](\img\Screenshot(1119).png  "San Juan Mountains")
+![The San Juan Mountains are beautiful!](img/Screenshot(1119).png  "San Juan Mountains")
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
