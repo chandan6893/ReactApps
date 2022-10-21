@@ -13,7 +13,7 @@ import axios from "axios";
         axios
           .get(
             `
-https://newsapi.org/v2/everything?q=entertainment&from=2022-09-20&sortBy=publishedAt&apiKey=3889666d68c044f695baa7d2ecbe7f78`
+https://newsapi.org/v2/everything?q=entertainment&from=2022-09-21&sortBy=publishedAt&apiKey=3889666d68c044f695baa7d2ecbe7f78`
           )
           .then((response) => {
             console.log(response.data.articles);
