@@ -1,6 +1,109 @@
-.AppMainContainer{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.NewsArticle{
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 58rem;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+.NewsArtilceContainer{
+    margin-top: 10%;
+}
+.articleImage{
+    height: 25rem;
+    width: 40rem;
+    margin-left:6rem ;
+    
+    border: none;
+    border-radius: 4px;
+    /* padding: 6rem; */
+    
+}
+ul{
+   list-style: none; 
+}
+a{
+    text-decoration: none;
+}
+.indiaTomorrow{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+    margin-left: 0.8rem;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightslategrey;
+    background-color: lightyellow;
+    padding: 1.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0px ;
+}
+.tabs{
+    display: flex;
+     }
+.tabMR{
+    margin-right: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:x-large;
+    color: lightseagreen;
+    color: darkslategrey;
+}
+.search{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+   font-size: large;
+   padding: 2px;
+   width: 7rem;
+   border-radius: 10px;
+   margin-right: 0.8rem;
+   position: relative;
+   /* border: 1px solid green; */
+}
+.searchIcon{
+    border: none;
+    position: absolute;
+    right: 42px;
+    background: transparent;
+    top: 42%;
+}
+.footer{
+  border: 1px solid lightsteelblue;
+  width: 100%;
+  padding: 1.4rem;
+  background-color: darkslategray;
+  /* position: absolute; */
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* height: 100vh; */
+  align-items: center;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: larger;
+  position: fixed;
+  bottom: 0;
+}
+.current{
+    margin-right: 0.5rem;
+}
+/* .News{
+    
+} */
+.publishedAt{
+    color: black;
+}
+.author{
+    color:darkgreen;
+}
+.author-PublishedAt{
+    display: flex;
+}
+.author-PublishedAt-readMore{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
 }
