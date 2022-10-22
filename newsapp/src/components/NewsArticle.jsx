@@ -1,9 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+
 
 function NewsArticle({ data }) {
+
+  const [like, setLike] = useState();
+  const [lik, setLik] = useState(0);
+
+   const handleLike = () => {
+     setLik((prev) => prev + 1);
+     setLike(lik);
+   };
+
+  const [dislike,setDislike] =useState();
+  const [count,setCount] = useState(0)
+  
+  const handleDislike =() =>{
+    setCount((prev) => prev + 1);
+    setDislike(count);
+  }  
   return (
     <>
-      <div className='NewsArtilceContainer' >
+      {/* <ul className='searchDisplay'>
+          <li>
+            {data.map((val) => {
+              return <h1>{val.title}</h1>
+            })}
+          </li>
+        </ul> */}
+
+      <div className="NewsArtilceContainer">
         <div className="NewsArticle">
           <h1>{data?.title}</h1>
           <h5>{data.description}</h5>
@@ -19,10 +45,15 @@ function NewsArticle({ data }) {
               <span className="author"> {data.author}</span>,
               <span className="publishedAt">{data.publishedAt}</span>
             </div>
-            <a href={data.url}>Read More</a>
+            <a className='readMore' href={data.url}>Read More....</a>
           </div>
 
-          {/* <a href={data.url}>Read More</a> */}
+          <ul className="like-dislike-comment-remove">
+            <li className="LDCRCCN"  onClick={ handleLike } > <i class="fa-solid fa-thumbs-up">{like? like: ""} </i> </li>
+            <li className="LDCRCCN" onClick={handleDislike} > <i class="fa-solid fa-thumbs-down"> <span> {dislike? dislike : ""} </span> </i> </li>
+            <li className="LDCRCCN comment"> <i class="fa-solid fa-comment"></i> </li>
+            <li className="LDCRCCN trash"> <i class="fa-solid fa-trash"></i> </li>
+          </ul>
         </div>
       </div>
     </>

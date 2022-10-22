@@ -5,6 +5,8 @@ import axios from "axios";
 
  export function NewsContextProvider({ children }){
     const [data,setData] = useState([]);
+    const [search,setSearch] = useState("");
+
     // const [isNewsLoading,setIsNewsLoading] = useState(false);
 
     // const apiKey = "1e3693f3d9fc492c88c192c185e86945";
@@ -12,9 +14,7 @@ import axios from "axios";
         // setIsNewsLoading(true);
         axios
           .get(
-            `
-https://newsapi.org/v2/everything?q=entertainment&from=2022-09-21&sortBy=publishedAt&apiKey=3889666d68c044f695baa7d2ecbe7f78`
-          )
+            `https://newsapi.org/v2/everything?q=apple&from=2022-10-21&to=2022-10-21&sortBy=popularity&apiKey=3889666d68c044f695baa7d2ecbe7f78`)
           .then((response) => {
             console.log(response.data.articles);
             setData(response.data);
@@ -25,7 +25,28 @@ https://newsapi.org/v2/everything?q=entertainment&from=2022-09-21&sortBy=publish
           });
 
     },[]);
-    return <NewsContext.Provider value={ {data} } >
-                { children }
-           </NewsContext.Provider>
+
+    const handleChange = (e) =>{
+      setSearch(e.target.value);
+      //  console.log(search);
+    }
+    const handleClick = () =>{
+      // console.log("Kumar");
+       axios
+         .get(
+           `https://newsapi.org/v2/everything?q=${search}&from=2022-10-21&to=2022-10-21&sortBy=popularity&apiKey=3889666d68c044f695baa7d2ecbe7f78`
+         )
+         .then((response) => {
+           console.log(response.data.articles);
+           setData(response.data);
+         });
+         setSearch("");
+    }
+   
+
+    return (
+      <NewsContext.Provider value={{ data, handleChange, handleClick, search }}>
+        {children}
+      </NewsContext.Provider>
+    );
  }

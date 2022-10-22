@@ -10,6 +10,12 @@
     margin: 4rem auto;
     padding: 2rem;
 }
+.readMore{
+    color:darkblue;
+    font-size: large;
+    font: bolder;
+    
+}
 .NewsArtilceContainer{
     margin-top: 10%;
 }
@@ -20,8 +26,6 @@
     
     border: none;
     border-radius: 4px;
-    /* padding: 6rem; */
-    
 }
 ul{
    list-style: none; 
@@ -40,7 +44,7 @@ a{
     align-items: center;
     border: 1px solid lightslategrey;
     background-color: lightyellow;
-    padding: 1.5rem;
+    padding: 1.2rem;
     position: fixed;
     width: 100%;
     top: 0px ;
@@ -71,6 +75,7 @@ a{
     right: 42px;
     background: transparent;
     top: 42%;
+    cursor: pointer;
 }
 .footer{
   border: 1px solid lightsteelblue;
@@ -106,4 +111,25 @@ a{
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
+}
+
+.like-dislike-comment-remove{
+    display:flex ;
+    /* align-items: center; */
+    margin-top: .5rem;
+    
+}
+.LDCRCCN{
+    /* margin-right: 3rem; */
+    width: 6%;
+    display: flex;
+    /* border: 1px solid red; */
+    color: limegreen;
+    cursor: pointer;
+}
+.trash{
+    color: red;
+}
+.comment{
+    color: darkgrey;
 }

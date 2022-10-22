@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NewsContext } from "../contexts/NewsContext";
 
 function Header() {
+// const [search,setSearch] = useState([]);
+const {handleChange,handleClick,search} = useContext(NewsContext);
+// const handleSearch = (e) =>{
+//   console.log(e.target.value);
+//   setSearch(e.target.value);
+// }
   return (
     <div>
       <div className="nav">
@@ -19,8 +26,8 @@ function Header() {
 
         <ul>
           <li>
-            <input className='search' type="text" placeholder="Search...." />
-            <button className='searchIcon'><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input value={search} onChange={(e)=>handleChange(e)} className='search' type="text" placeholder="Search...." />
+            <button onClick={handleClick} className='searchIcon'><i class="fa-solid fa-magnifying-glass"></i></button>
           </li>
         </ul>
       </div>
