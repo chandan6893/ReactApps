@@ -17,9 +17,9 @@ function News(props) {
 
       {data
 
-        ? data?.articles?.map((news) => (
+        ? data?.map((news) => (
             // <div>{console.log({news})}</div>
-            <NewsArticle data={news} key={news.url} />
+            <NewsArticle dataA={news} key={news.url} />
           ))
         : "Loading"}
 

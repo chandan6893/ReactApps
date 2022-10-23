@@ -1,8 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
+import { NewsContext } from '../contexts/NewsContext';
 
 
 
-function NewsArticle({ data }) {
+function NewsArticle({ dataA }) {
+  const { handleDelete } = useContext(NewsContext);
+  // const [del, setDel] = useState(dataA);
+  
+    // setDel(x);
+  // };
 
   const [like, setLike] = useState();
   const [lik, setLik] = useState(0);
@@ -31,28 +37,27 @@ function NewsArticle({ data }) {
 
       <div className="NewsArtilceContainer">
         <div className="NewsArticle">
-          <h1>{data?.title}</h1>
-          <h5>{data.description}</h5>
+          <h1>{dataA?.title}</h1>
+          <h5>{dataA.description}</h5>
 
-          <img className="articleImage" src={data.urlToImage} alt="" />
-          <p>{data.content}</p>
+          <img className="articleImage" src={dataA.urlToImage} alt="" />
+          <p>{dataA.content}</p>
 
-          {/* <h6 className="author"> {data.author}</h6>
-          <h6 className="publishedAt">{data.publishedAt}</h6> */}
+        
 
           <div className="author-PublishedAt-readMore">
             <div className="author-PublishedAt">
-              <span className="author"> {data.author}</span>,
-              <span className="publishedAt">{data.publishedAt}</span>
+              <span className="author"> {dataA.author}</span>,
+              <span className="publishedAt">{dataA.publishedAt}</span>
             </div>
-            <a className='readMore' href={data.url}>Read More....</a>
+            <a className='readMore' href={dataA.url}>Read More....</a>
           </div>
 
           <ul className="like-dislike-comment-remove">
             <li className="LDCRCCN"  onClick={ handleLike } > <i class="fa-solid fa-thumbs-up">{like? like: ""} </i> </li>
             <li className="LDCRCCN" onClick={handleDislike} > <i class="fa-solid fa-thumbs-down"> <span> {dislike? dislike : ""} </span> </i> </li>
             <li className="LDCRCCN comment"> <i class="fa-solid fa-comment"></i> </li>
-            <li className="LDCRCCN trash"> <i class="fa-solid fa-trash"></i> </li>
+            <li className="LDCRCCN trash" onClick={()=>handleDelete(dataA.url)} > <i class="fa-solid fa-trash"></i> </li>
           </ul>
         </div>
       </div>

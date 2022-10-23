@@ -80,9 +80,8 @@ a{
 .footer{
   border: 1px solid lightsteelblue;
   width: 100%;
-  padding: 1.4rem;
+  padding: 1.3rem;
   background-color: darkslategray;
-  /* position: absolute; */
   display: flex;
   justify-content: center;
   align-items: center;

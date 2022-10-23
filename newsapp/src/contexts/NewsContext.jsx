@@ -16,8 +16,8 @@ import axios from "axios";
           .get(
             `https://newsapi.org/v2/everything?q=apple&from=2022-10-21&to=2022-10-21&sortBy=popularity&apiKey=3889666d68c044f695baa7d2ecbe7f78`)
           .then((response) => {
-            console.log(response.data.articles);
-            setData(response.data);
+            // console.log(response.data.articles);
+            setData(response.data.articles);
           })
           .catch((error) => console.log("Something Unusual", error))
           .finally(() => {
@@ -25,6 +25,14 @@ import axios from "axios";
           });
 
     },[]);
+
+    const handleDelete = (url) => {
+    console.log(data);
+    const x = data.filter((i) => {
+      return i.url !== url;
+    });
+    setData(x)
+  }
 
     const handleChange = (e) =>{
       setSearch(e.target.value);
@@ -37,16 +45,17 @@ import axios from "axios";
            `https://newsapi.org/v2/everything?q=${search}&from=2022-10-21&to=2022-10-21&sortBy=popularity&apiKey=3889666d68c044f695baa7d2ecbe7f78`
          )
          .then((response) => {
-           console.log(response.data.articles);
-           setData(response.data);
+          //  console.log(response.data.articles);
+           setData(response.data.articles);
          });
          setSearch("");
     }
    
 
     return (
-      <NewsContext.Provider value={{ data, handleChange, handleClick, search }}>
+      <NewsContext.Provider value={{ data, handleChange, handleClick, search,handleDelete }}>
         {children}
+        
       </NewsContext.Provider>
     );
  }
