@@ -1,0 +1,11 @@
+.container{
+    /* background-color: aquamarine; */
+    display: flex;
+    
+}
+.cards{
+    background-color: blue;
+    width: 10px;
+    height: 2rem;
+    /* padding: ; */
+}

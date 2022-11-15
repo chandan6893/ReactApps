@@ -27,7 +27,7 @@ const {handleChange,handleClick,search} = useContext(NewsContext);
         <ul>
           <li>
             <input value={search} onChange={(e)=>handleChange(e)} className='search' type="text" placeholder="Search...." />
-            <button onClick={handleClick} className='searchIcon'><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button onClick={handleClick} className='searchIcon'><i className="fa-solid fa-magnifying-glass"></i></button>
           </li>
         </ul>
       </div>

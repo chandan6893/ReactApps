@@ -54,10 +54,10 @@ function NewsArticle({ dataA }) {
           </div>
 
           <ul className="like-dislike-comment-remove">
-            <li className="LDCRCCN"  onClick={ handleLike } > <i class="fa-solid fa-thumbs-up">{like? like: ""} </i> </li>
-            <li className="LDCRCCN" onClick={handleDislike} > <i class="fa-solid fa-thumbs-down"> <span> {dislike? dislike : ""} </span> </i> </li>
-            <li className="LDCRCCN comment"> <i class="fa-solid fa-comment"></i> </li>
-            <li className="LDCRCCN trash" onClick={()=>handleDelete(dataA.url)} > <i class="fa-solid fa-trash"></i> </li>
+            <li className="LDCRCCN"  onClick={ handleLike } > <i className="fa-solid fa-thumbs-up">{like? like: ""} </i> </li>
+            <li className="LDCRCCN" onClick={handleDislike} > <i className="fa-solid fa-thumbs-down"> <span> {dislike? dislike : ""} </span> </i> </li>
+            <li className="LDCRCCN comment"> <i className="fa-solid fa-comment"></i> </li>
+            <li className="LDCRCCN trash" onClick={()=>handleDelete(dataA.url)} > <i className="fa-solid fa-trash"></i> </li>
           </ul>
         </div>
       </div>

@@ -13,7 +13,7 @@ export function List(props) {
    },[people])
     // console.log(items);
     const handleDelete = (id) =>{
-      console.log(id)
+      // console.log(id)
       const x =items.filter((i)=>{
         // console.log(i,i.id,id);
         return i.id !== id ;
