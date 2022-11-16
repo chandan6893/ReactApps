@@ -82,4 +82,6 @@ describe("Greet", () => {
 
    });
 });
+// we have created a command for code coverage . see it in "scripts" block of package.json that is 
+// "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage"
 
