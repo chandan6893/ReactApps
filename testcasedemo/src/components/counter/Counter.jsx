@@ -3,9 +3,29 @@ import "./counter.css"
 
 export function Counter() {
   return (
-    <div>
-      <h1 className="counter_title">Counter</h1>
-    </div>
+    <form >
+      <div>
+        <label htmlFor="name">name</label>
+        <input type="text" id='name' />
+      </div>
+      <div>
+        <label htmlFor="location">Location</label>
+        <select  id="location">
+          <option value="us">US</option>
+          <option value="uk">UK</option>
+          <option value="ind">INDIA</option>
+          <option value="rsa">RUSSIA</option>
+        </select>
+      </div>
+
+      <div>
+        <label >
+          <input type="checkbox" id='terms' /> I agree to the above terms 
+        </label>
+      </div>
+
+      <button>submit</button>
+    </form>
   );
 }
 
