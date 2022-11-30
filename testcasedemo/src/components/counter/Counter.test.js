@@ -5,7 +5,7 @@ describe("Counter Component",()=>{
         test("renders input correctly",()=>{
             render(<Counter />);
 // below we r writing test case for input i.e textbox
-        const nameElement = screen.getByRole("textbox");
+        const nameElement = screen.getByRole("textbox",{name:"Name"});
         expect(nameElement).toBeInTheDocument();
         });
 
@@ -27,4 +27,6 @@ describe("Counter Component",()=>{
             const submitBtnElement = screen.getByRole("button");
             expect(submitBtnElement).toBeInTheDocument();
         });
+
+        
 });
