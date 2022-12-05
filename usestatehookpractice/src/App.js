@@ -4,6 +4,7 @@ import Context from './components/Context';
 import { PractUseReducer } from './components/PractUseReducer';
 import { TitleChange } from './components/TitleChange';
 import {ToDoApp} from "./components/ToDoApp"
+import { UseMemoPract } from './components/UseMemoPract';
 import {UseReducer} from './components/UseReducer';
 
 function App() {
@@ -13,7 +14,9 @@ function App() {
    {/* <TitleChange /> */}
    {/* <Context /> */}
    {/* <UseReducer /> */}
-   <PractUseReducer />
+   {/* <PractUseReducer /> */}
+
+   <UseMemoPract />
     </>
   );
 }
