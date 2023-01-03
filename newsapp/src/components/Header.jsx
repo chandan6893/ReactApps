@@ -18,10 +18,10 @@ const {handleChange,handleClick,search} = useContext(NewsContext);
         </ul>
 
         <ul className="tabs">
-          <li className="tabMR">Headlines</li>
+          {/* <li className="tabMR">Headlines</li>
           <li className="tabMR">World</li>
           <li className="tabMR">Entertainments</li>
-          <li className="tabMR">Business</li>
+          <li className="tabMR">Business</li> */}
         </ul>
 
         <ul>
