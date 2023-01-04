@@ -7,13 +7,18 @@
     color: red;
 }
 #lcd{
-    color: darkblue;
+    color: darkturquoise;
 }
 ul{
     list-style: none;
 }
+.mainContainer{
+    /* background-color:rgb(21, 2, 2); */
+    background-color: rgb(7, 3, 31);
+    margin-bottom: 0.6rem;
+}
 .container{
-    margin-top: 4rem ;
+    margin-top: 0.5rem ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,7 +32,7 @@ ul{
     padding: 1.8rem;
     color: white;
     border-radius: 0.3rem;
-    margin: 1rem;
+    margin: 2rem;
 }
 .content:hover {
   /* -ms-transform: scale(1.5);  */
@@ -56,4 +61,45 @@ span{
 }
 .cl6{
      background-color:lightgreen;
+}
+
+.mainHeading{
+    color: darkblue;
+    /* margin-bottom: 1rem; */
+    background-color:teal ;
+    padding: 0.5rem;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: lightslategray;
+  color:white;
+}
+tr:nth-child(odd) {
+  /* background-color: darkslateblue; */
+  background-color:  rgb(7, 3, 31);
+  color: white;
+}
+
+th:hover {
+  /* -ms-transform: scale(1.5);  */
+  /* -webkit-transform: scale(1.5);  */
+  transform: scale(1); 
+  background-color:darkolivegreen;
+}
+td:hover {
+  /* -ms-transform: scale(1.5);  */
+  /* -webkit-transform: scale(1.5);  */
+  transform: scale(1); 
+  background-color:coral;
 }

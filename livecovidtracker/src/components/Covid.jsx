@@ -1,31 +1,33 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import './covid.css'
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import "./covid.css";
 
 function Covid() {
-  const [data,setData] = useState([]);  
-  const getCovidData = async() =>{
-        
-        try{
-            const response = await fetch("https://data.covid19india.org/data.json");
-            const actualData = await response.json();
-            // console.log(actualData.statewise[0]);
-            setData(actualData.statewise[0]);
-        }catch(error){
-            console.log(error)
-        }
+  const [data, setData] = useState([]);
+  const [item,setItem] = useState([]);
+  const getCovidData = async () => {
+    try {
+      const response = await fetch("https://data.covid19india.org/data.json");
+      const actualData = await response.json();
+      // console.log(actualData);
+      console.log(actualData.statewise[0]);
+      setData(actualData.statewise[0]);
+      setItem(actualData.statewise)
+    } catch (error) {
+      console.log(error);
     }
+  };
 
-    useEffect(()=>{
-        // getCovidData();
-    },[])
+  useEffect(() => {
+    getCovidData();
+  }, []);
 
   return (
     <div>
-      <section>
-        <h3 id='live' >Live</h3>
-        <h1 id='lcd'>Live Covid Tracker</h1>
+      <section className="mainContainer">
+        <h3 id="live">Live</h3>
+        <h1 id="lcd">Live Covid Tracker</h1>
         <ul className="container">
           <li className="mainCard">
             <div className="content cl1">
@@ -85,17 +87,49 @@ function Covid() {
           <li className="mainCard">
             <div className="content cl6">
               <p className="title">
-                <span>UpdatedTime</span>
+                <span>Migratedother</span>
               </p>
               <p className="data">
-                <span>{data.lastupdatedtime}</span>
+                <span>{data.migratedother}</span>
               </p>
             </div>
           </li>
         </ul>
       </section>
+
+      <section>
+        <div className="mainHeading">
+          <h1>Covid19 Dashboard</h1>
+        </div>
+
+        <div className="tableResponsive">
+          <table>
+            <tr>
+              <th>State</th>
+              <th>Recovered</th>
+              <th>Active</th>
+              <th>Confirmed</th>
+              <th>Delta Recovered</th>
+              <th>Migreted Other</th>
+            </tr>
+
+            {item.map((currelem, index) => {
+              return (
+                <tr key={index}>
+                  <td>{currelem.state}</td>
+                  <td>{currelem.recovered}</td>
+                  <td>{currelem.active}</td>
+                  <td>{currelem.confirmed}</td>
+                  <td>{currelem.deltarecovered}</td>
+                  <td>{currelem.migratedother}</td>
+                </tr>
+              );
+            })}
+          </table>
+        </div>
+      </section>
     </div>
   );
 }
 
-export default Covid
+export default Covid;
