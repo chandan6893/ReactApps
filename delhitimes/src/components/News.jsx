@@ -1,25 +1,17 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useGlobalContext } from './Context';
 
 
 
 function News() {
-    let API = "https://hn.algolia.com/api/v1/search_by_date?query=cricket";
-    const getData = async (url) => {
-      try {
-        const response = await fetch(url);
-        const actualData = await response.json();
-        console.log(actualData);
-      } catch (error) {
-        console.log(error)
-      }
-    };
-    useEffect(() => {
-    //   getData(API);
-    }, []);
+   const {hits,nbPages} = useGlobalContext();
 
   return (
-    <>News</>
+    <>
+        {hits.map((currElem)=>{
+            return <h2>{currElem.title}</h2>
+        })}
+    </>
   )
 }
 
