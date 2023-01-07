@@ -17,6 +17,8 @@ function ContextProvider({children}) {
 
      
      const getData = async (url) => {
+
+      dispatch({type: "SET__LOADING"});
        try {
          const response = await fetch(url);
          const actualData = await response.json();
