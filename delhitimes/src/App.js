@@ -1,8 +1,9 @@
-import React,{ useContext } from 'react';
-import {  context } from './components/Context';
+import React from 'react';
+// import {  context } from './components/Context';
 import './App.css';
 import News from './components/News';
 import Header from './components/Header';
+import Pagination from './components/Pagination';
 
 // import { useGlobalContext } from './components/Context';
 
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
      <Header /> 
      <News />
+     <Pagination />
      {/* {fname} */}
     </div>
   );

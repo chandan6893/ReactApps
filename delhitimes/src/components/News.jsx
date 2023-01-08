@@ -4,9 +4,9 @@ import { useGlobalContext } from './Context';
 
 
 function News() {
-   const {hits,nbPages,isLoading,removePost} = useGlobalContext();
+   const {hits,isLoading,removePost} = useGlobalContext();
   if(isLoading){
-    return <h2 className='loading' >...Loading</h2>
+    return <h2 className='loading' >.....</h2>
   }else{
     return (
       <>
@@ -15,22 +15,22 @@ function News() {
             const { title, story_title, author, objectID, url,story_url ,num_comments } =
               currPost;
             return (
-              
-                <div className="card" key={objectID}>
-                  <h2>{title || story_title }</h2>
-                  <p>
-                    By <span>{author}</span> | <span>{num_comments} </span>
-                     Comments
-                  </p>
+              <div className="card" key={objectID}>
+                <h2>{title || story_title}</h2>
+                <p>
+                  By <span>{author}</span> | <span>{num_comments} </span>
+                  Comments
+                </p>
 
-                  <div className="card-button">
-                    <a href={url || story_url } target="_blank">
-                      Read More
-                    </a>
-                    <a href="#" onClick={()=>removePost(objectID)} >Remove</a>
-                  </div>
+                <div className="card-button">
+                  <a href={url || story_url} target="_blank" rel="noopener">
+                    Read More
+                  </a>
+                  <a href="#" onClick={() => removePost(objectID)}>
+                    Remove
+                  </a>
                 </div>
-              
+              </div>
             );
           })}
         </div>

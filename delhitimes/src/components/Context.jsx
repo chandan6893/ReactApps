@@ -43,13 +43,22 @@ function ContextProvider({children}) {
       dispatch({type:"SEARCH__QUERY",payload:squery})
      }
 
+    //  pagination
+    const getPrevPage = () =>{
+      dispatch({type:"PREV__PAGE"})
+    }
+
+    const getNextPage = () =>{
+      dispatch({type:"NEXT__PAGE"})
+    }
+
      useEffect(() => {
        getData(`${API}query=${state.query}&page=${state.page}`);
-     }, [state.query]);
+     }, [state.query,state.page]);
 
   return (
     <div>
-        <context.Provider value = {{...state,removePost,searchPost}} >
+        <context.Provider value = {{...state,removePost,searchPost,getPrevPage,getNextPage}} >
         {children}
         </context.Provider>
     </div>

@@ -20,13 +20,37 @@ const reducer = (state,action) =>{
       return {
         ...state,
         hits: state.hits.filter(
-          (currItem) => currItem.objectID !== action.payload
+          (currItem, i) => currItem.objectID !== action.payload
         ),
       };
 
     // search
     case "SEARCH__QUERY":
-      return { ...state, query: action.payload ,};
+      return { ...state, query: action.payload };
+
+    case "PREV__PAGE":
+    let pageNum = state.page;
+    if(pageNum <= 0){
+      pageNum = 0;
+    } else{
+      pageNum = pageNum - 1;
+    } 
+
+      return { ...state,
+         page: pageNum  };
+
+    case "NEXT__PAGE":
+      let pageNumInc = state.page;
+      if(pageNumInc>=state.nbPages-1 ){
+          pageNumInc = 0;
+      }else{
+        pageNumInc = pageNumInc + 1;
+      }
+      return {...state,
+      page: pageNumInc }
+
+    default:
+      return state;
   }
 };
 export default reducer;
