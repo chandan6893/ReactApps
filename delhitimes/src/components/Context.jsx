@@ -6,7 +6,7 @@ let API = "https://hn.algolia.com/api/v1/search_by_date?";
 const context = createContext();
 const initialState = {
     isLoading:true,
-    query:"HTML",
+    query:"",
     nbPages:0,
     page:0,
     hits:[]
@@ -34,13 +34,22 @@ function ContextProvider({children}) {
          console.log(error);
        }
      };
+
+     const removePost = (post__id) =>{
+      dispatch({type : "REMOVE__POST",payload : post__id })
+     }
+     const searchPost = (squery) =>{
+      
+      dispatch({type:"SEARCH__QUERY",payload:squery})
+     }
+
      useEffect(() => {
        getData(`${API}query=${state.query}&page=${state.page}`);
-     }, []);
+     }, [state.query]);
 
   return (
     <div>
-        <context.Provider value = {{...state}} >
+        <context.Provider value = {{...state,removePost,searchPost}} >
         {children}
         </context.Provider>
     </div>

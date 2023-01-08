@@ -9,7 +9,7 @@ html{
 }
 
 body{
-  background-color:rgb(194, 196, 129) ;
+  background-color:rgb(200, 225, 233);
 }
 
 h2{
@@ -32,17 +32,21 @@ span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:4rem ;
+  /* gap:rem ; */
 }
 
 .card {
   min-width: 20rem;
   width: 50vw;
   padding: 4rem;
-  background-color: rgb(154, 147, 201);
+  /* background-color: rgb(171, 144, 95); */
+  /* background-color: rgb(209, 180, 209); */
+  background-color: aliceblue;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius:0.5rem ;
-  color: #15133c;
+  /* color: #15133c; */
+  margin-top: 7rem;
+  /* margin-bottom: 4rem; */
 }
 .card-button{
   display: flex;
@@ -60,7 +64,34 @@ span{
   color: red;
   text-decoration: none;
 }
+.loading{
+  text-align: center;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(152, 219, 152);
+  height: 6rem;
+  width: 100vw;
+  padding: 0 4rem;
+  position:fixed;
+}
+.input{
+  outline: none;
+  border: none;
+  padding: 0.8rem;
+  width: 19rem;
+  border-radius: 0.6rem;
+  font-size: large;
+  /* margin-right: 1rem; */
 
+}
+.webTitle{
+  color:red;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 3rem;
+}
 
 
 
