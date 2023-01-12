@@ -1,8 +1,10 @@
 import React from 'react';
+import { useGlobalContext } from './Context';
 
 function Home() {
+    const name = useGlobalContext()
   return (
-    <div>Home</div>
+    <div>Home{name}</div>
   )
 }
 
