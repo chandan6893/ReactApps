@@ -6,7 +6,7 @@ import { useGlobalContext } from './Context';
 function News() {
    const {hits,isLoading,removePost} = useGlobalContext();
   if(isLoading){
-    return <h2 className='loading' >.....</h2>
+    return <h2 className='loading' >... Loading</h2>
   }else{
     return (
       <>

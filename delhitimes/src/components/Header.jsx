@@ -11,7 +11,7 @@ function Header() {
           <input
             className="input"
             type="text"
-            placeholder="search"
+            placeholder="Search...."
             value={query}
             onChange={(e) => searchPost(e.target.value)}
           />

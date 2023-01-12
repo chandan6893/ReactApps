@@ -8,11 +8,11 @@ import Parent from './useCallBackHook/Parent';
 function App() {
   return (
     <div className="App">
-     {/* <ToDoApp /> */}
+     <ToDoApp />
      {/* <Counter /> */}
      {/* <UseMHook /> */}
      {/* parent is for useCallbackHook */}
-     <Parent />
+     {/* <Parent /> */}
     </div>
   );
 }

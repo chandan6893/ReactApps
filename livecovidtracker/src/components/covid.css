@@ -13,7 +13,6 @@ ul{
     list-style: none;
 }
 .mainContainer{
-    /* background-color:rgb(21, 2, 2); */
     background-color: rgb(7, 3, 31);
     margin-bottom: 0.6rem;
 }
@@ -32,11 +31,9 @@ ul{
     padding: 1.8rem;
     color: white;
     border-radius: 0.3rem;
-    margin: 2rem;
+    margin: 3rem;
 }
 .content:hover {
-  /* -ms-transform: scale(1.5);  */
-  /* -webkit-transform: scale(1.5);  */
   transform: scale(1.1); 
 }
 span{
@@ -65,7 +62,6 @@ span{
 
 .mainHeading{
     color: darkblue;
-    /* margin-bottom: 1rem; */
     background-color:teal ;
     padding: 0.5rem;
 }
@@ -86,20 +82,27 @@ tr:nth-child(even) {
   color:white;
 }
 tr:nth-child(odd) {
-  /* background-color: darkslateblue; */
   background-color:  rgb(7, 3, 31);
   color: white;
 }
 
 th:hover {
-  /* -ms-transform: scale(1.5);  */
-  /* -webkit-transform: scale(1.5);  */
   transform: scale(1); 
   background-color:darkolivegreen;
 }
 td:hover {
-  /* -ms-transform: scale(1.5);  */
-  /* -webkit-transform: scale(1.5);  */
   transform: scale(1); 
   background-color:coral;
+}
+.searchBox{
+  border-radius: none;
+  border-radius: 0.3rem;
+  outline: none;
+  background-color: lightskyblue;
+  color:darkslateblue;
+  font-size: larger;
+  font-weight: 500;
+  padding: 0.6rem;
+  width: 25rem;
+position: static;
 }

@@ -6,12 +6,13 @@ import "./covid.css";
 function Covid() {
   const [data, setData] = useState([]);
   const [item,setItem] = useState([]);
+  const [search,setSearch] = useState('');
   const getCovidData = async () => {
     try {
       const response = await fetch("https://data.covid19india.org/data.json");
       const actualData = await response.json();
-      // console.log(actualData);
-      console.log(actualData.statewise[0]);
+      console.log(actualData);
+      // console.log(actualData.statewise);
       setData(actualData.statewise[0]);
       setItem(actualData.statewise)
     } catch (error) {
@@ -22,7 +23,7 @@ function Covid() {
   useEffect(() => {
     getCovidData();
   }, []);
-
+console.log(item)
   return (
     <div>
       <section className="mainContainer">
@@ -98,33 +99,42 @@ function Covid() {
       </section>
 
       <section>
+
         <div className="mainHeading">
           <h1>Covid19 Dashboard</h1>
-        </div>
+          <input className="searchBox" type="text" value={search} onChange={(e)=>setSearch(e.target.value)} />
+        </div>  
+        
 
         <div className="tableResponsive">
           <table>
-            <tr>
-              <th>State</th>
-              <th>Recovered</th>
-              <th>Active</th>
-              <th>Confirmed</th>
-              <th>Delta Recovered</th>
-              <th>Migreted Other</th>
-            </tr>
+            <tbody>
+              <tr>
+                <th>State</th>
+                <th>Recovered</th>
+                <th>Active</th>
+                <th>Confirmed</th>
+                <th>Delta Recovered</th>
+                <th>Migreted Other</th>
+              </tr>
+            </tbody>
 
-            {item.map((currelem, index) => {
-              return (
-                <tr key={index}>
-                  <td>{currelem.state}</td>
-                  <td>{currelem.recovered}</td>
-                  <td>{currelem.active}</td>
-                  <td>{currelem.confirmed}</td>
-                  <td>{currelem.deltarecovered}</td>
-                  <td>{currelem.migratedother}</td>
-                </tr>
-              );
-            })}
+            <tbody>
+              {item.filter((ele,ind)=>{
+                return ele.state.toLowerCase().includes(search.toLowerCase()) 
+              }).map((currelem, index) => {
+                return (
+                  <tr key={index} draggable >
+                    <td>{currelem.state}</td>
+                    <td>{currelem.recovered}</td>
+                    <td>{currelem.active}</td>
+                    <td>{currelem.confirmed}</td>
+                    <td>{currelem.deltarecovered}</td>
+                    <td>{currelem.migratedother}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
           </table>
         </div>
       </section>

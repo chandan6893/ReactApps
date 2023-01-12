@@ -9,7 +9,6 @@ html{
 }
 
 body{
-  /* background-color:rgb(200, 225, 233); */
   background-color: rgb(89, 83, 108);
 }
 .App{
@@ -36,21 +35,16 @@ span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap:rem ; */
 }
 
 .card {
   min-width: 20rem;
   width: 50vw;
   padding: 4rem;
-  /* background-color: rgb(171, 144, 95); */
-  /* background-color: rgb(209, 180, 209); */
   background-color: aliceblue;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius:0.5rem ;
-  /* color: #15133c; */
   margin-top: 7rem;
-  /* margin-bottom: 4rem; */
 }
 .card-button{
   display: flex;
@@ -70,19 +64,16 @@ span{
 }
 .loading{
   text-align: center;
-  font-size: 10rem;
+  font-size: 4rem;
   color: #ffffff;
-  /* position: absolute; */
-  /* margin-top: 10rem ; */
- /* margin-top: 40rem; */
-  /* margin-right: 55%; */
-
+  position: absolute;
+  margin-top: 10rem ;
+  width: 100%;
 }
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: rgb(152, 219, 152); */
   background-color: rgb(44, 44, 81);  
   height: 6rem;
   width: 100vw;
@@ -98,26 +89,19 @@ span{
   font-size: large;
   background-color: rgb(199, 220, 233);
   color: black;
-  /* margin-right: 1rem; */
-
 }
 .webTitle{
-  /* color:red; */
   color: white;
   font-family:'Times New Roman', Times, serif;
   font-size: 3rem;
 }
 .pagination-btn{
-  /* background-color: tomato; */
   position:fixed;
-  width: 100%;
+  width: 100vw;
   display:flex ;
   justify-content: center;
   align-items: center;
   bottom: 0rem;
-  /* top: 10%; */
-  /* position: sticky; */
-  /* margin-bottom: 4rem; */
 }
 .btn{
   background-color: rgb(147, 62, 190);
@@ -133,8 +117,18 @@ span{
 }
 .pageNum{
   font-size: large;
-  color: #ffffff;
+  color: darkblue;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-
+@media (max-width:99dpx){
+  html{
+    font-size: 56%;
+  }
+}
+.ccard{
+  min-width: 45rem;
+  padding: 2.5rem;
+}
 

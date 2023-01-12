@@ -7,7 +7,7 @@ function Pagination() {
     <>
       <div className="pagination-btn">
         <button className='prev btn' onClick={() => getPrevPage()}>PREV</button>
-        <span className='pageNum' >{ page + 1 } of { nbPages }</span>
+        <span className='pageNum' >{ page + 1 } of  { nbPages }</span>
         <button className='next btn' onClick={() => getNextPage()}>NEXT</button>
       </div>
     </>
