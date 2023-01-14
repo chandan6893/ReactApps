@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { useGlobalContext } from './Context';
 
 function Search() {
+  const {query,setQuery} = useGlobalContext();
   return (
-    <div>Search</div>
+    <section>
+      <form onSubmit={(e)=>e.preventDefault()}>
+        <div>
+          <input type="text" placeholder='Search here' value={query} onChange={(e)=>setQuery(e.target.value)} />
+        </div>
+      </form>
+    </section>
   )
 }
 

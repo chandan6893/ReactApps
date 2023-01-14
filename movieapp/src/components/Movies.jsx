@@ -6,13 +6,14 @@ function Movies() {
   const {movie} =useGlobalContext()
   return (
     <section className='movie-page' >
-      <div className='grid grid-4-col' >{movie.map((currMve)=>{
+      <div className='container grid grid-4-col' >{movie.map((currMve)=>{
         const { Title, imdbID, Poster } = currMve;
+        // console.log(Title.substring(0,15))
         return (
           <NavLink to={`movie/${imdbID}`} key={imdbID}>
             <div className='card'>
               <div className="card-info">
-                <h2>{Title}</h2>
+                <h2>{Title.length >= 15 ? `${Title.substring(0,15)}...`: Title}</h2>
                 <img src={Poster} alt="" />
               </div>
             </div>

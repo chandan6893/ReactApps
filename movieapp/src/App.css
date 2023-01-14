@@ -6,6 +6,12 @@ img {
   border-radius: 1rem;
   transition: all 0.3s linear;
 }
+.container {
+  max-width: 140rem;
+  margin: auto;
+  padding: 3rem;
+}
+
 
 .grid {
   display: grid;
