@@ -13,7 +13,7 @@ function AppContextProvider({children}) {
   const [isLoading,setIsLoading] = useState(true);
   const [isError,setIsError] = useState({show : false , msg :""});
 
-  const [query,setQuery] = useState("titanic");
+  const [query,setQuery] = useState("matrix");
 // console.log(mov);
   const getMovies = async(url) =>{
        try{
@@ -36,8 +36,15 @@ function AppContextProvider({children}) {
   }
 
   useEffect(()=>{
-    console.log(query)
-    getMovies(`${API__URL}&s=${query}`);
+    // console.log(query)
+    let timer;
+    timer=setTimeout(()=>{
+      getMovies(`${API__URL}&s=${query}`);
+    },4000)
+    return function cleanUp(){
+      clearInterval(timer);
+    }
+    
   },[query])
   return (
     <>
