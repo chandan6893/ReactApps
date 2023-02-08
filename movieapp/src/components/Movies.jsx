@@ -3,7 +3,16 @@ import { useGlobalContext } from './Context';
 import {NavLink} from "react-router-dom"
 
 function Movies() {
-  const {movie} =useGlobalContext()
+  const {movie,isLoading} =useGlobalContext();
+
+ if(isLoading){
+  return(
+    <div className='"movie-section'>
+      <div className='loading'>Loading...</div>
+    </div>
+  );
+ }
+
   return (
     <section className='movie-page' >
       <div className='container grid grid-4-col' >{movie.map((currMve)=>{

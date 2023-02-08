@@ -24,10 +24,15 @@ function AppContextProvider({children}) {
         //  plz check console.log(data,data.Response,data.Search)
          if(data.Response === "True"){
           setIsLoading(false);
+          setIsError({ show: false, msg: "" });
             setMovie(data.Search);
             
          }else{
-          setIsError({show : true , msg:data.error})
+          setIsError(
+            {show : true ,
+             msg:data.Error
+            }
+            )
          }
        
        }catch(error){
@@ -40,9 +45,9 @@ function AppContextProvider({children}) {
     let timer;
     timer=setTimeout(()=>{
       getMovies(`${API__URL}&s=${query}`);
-    },4000)
+    },500)
     return function cleanUp(){
-      clearInterval(timer);
+      clearTimeout(timer);
     }
     
   },[query])
