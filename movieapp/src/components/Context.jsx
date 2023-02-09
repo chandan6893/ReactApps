@@ -5,7 +5,7 @@ import { createContext } from 'react';
 
 
 //  const API__URL = `https://www.omdbapi.com/?i=tt3896198&apikey=c2264f6f&s=matrix`;
-const API__URL = `http://www.omdbapi.com/?apikey=c2264f6f`;
+export const API__URL = `http://www.omdbapi.com/?apikey=c2264f6f`;
 
 function AppContextProvider({children}) {
   
@@ -13,9 +13,10 @@ function AppContextProvider({children}) {
   const [isLoading,setIsLoading] = useState(true);
   const [isError,setIsError] = useState({show : false , msg :""});
 
-  const [query,setQuery] = useState("matrix");
+  const [query,setQuery] = useState("avengers");
 // console.log(mov);
   const getMovies = async(url) =>{
+    setIsLoading(true);
        try{
          const response = await fetch(url);
          const data = await response.json();
