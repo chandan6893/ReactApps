@@ -10,7 +10,7 @@ import ErrorPage from './components/ErrorPage';
 
 function App() {
   return (
-    <>
+    
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
-    </>
+    
   );
 }
 
