@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./header.css";
 
 function Header() {
   return (
-    <div>
+    <div className='header'>
       <div className="headerLogo">
         <h1 className="logo">EasyShop</h1>
       </div>
