@@ -3,18 +3,19 @@ import "./header.css";
 
 function Header() {
   return (
-    <div className='header'>
+    <div className="header">
       <div className="headerLogo">
-        <h1 className="logo">EasyShop</h1>
+        <h2 className="logo">EasyShop</h2>
       </div>
 
       <div className="headerSearch">
         <input className="searchInput" type="text" placeholder="Search..." />
+        <i class="fa-solid fa-magnifying-glass searchIcon"></i>
       </div>
 
       <div className="headerNav">
         <div className="nav__item">
-          <span className="navItemLineOne">Hello Guest</span>
+          <span className="navItemLineOne">Hello, Guest</span>
           <span className="navItemLineTwo">Sign In</span>
         </div>
 
@@ -23,11 +24,11 @@ function Header() {
           <span className="navItemLineTwo">Shop</span>
         </div>
 
-        <div className="nav__item">
-          <span className="navItemLineOne cart">
-            <i class="fa-solid fa-cart-shopping"></i>
+        <div className=" cartAndItems">
+          <span className="cart">
+            <i class="fa-solid fa-cart-shopping cartIcon"></i>
           </span>
-          <span className="navItemLineTwo">cart</span>
+          <span className="noOfItems" >0</span>
         </div>
       </div>
     </div>

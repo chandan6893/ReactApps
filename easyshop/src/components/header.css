@@ -7,8 +7,13 @@
     background-color:darkslateblue;
     display: flex;
     justify-content: space-between;
+    height: 4rem;
     align-items: center;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.headerLogo{
+    margin-left: 1rem;
 }
 .searchInput{
     width: 35rem;
@@ -24,6 +29,34 @@
 .headerNav{
     display: flex;
     width: 30rem;
-    justify-content: space-around;
-    margin-right: 2rem;
+    justify-content: space-evenly;
+}
+.headerSearch{
+    position: relative;
+}
+.searchIcon{
+    padding: 0.8rem;
+    height: 2.5rem !important;
+    border: none;
+    border-top-right-radius:0.3rem;
+    border-bottom-right-radius:0.3rem;
+    position: absolute;
+    right: 0.0%;
+    background-color:orange;
+}
+.nav__item{
+    display: flex;
+    flex-direction: column;
+}
+.navItemLineOne{
+    font-size: 13px;
+}
+.navItemLineTwo{
+    font-size: 16px;
+}
+.cartAndItems{
+    display: flex;
+}
+.cartIcon{
+    font-size: 31px;
 }
