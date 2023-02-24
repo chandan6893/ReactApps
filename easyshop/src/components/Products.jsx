@@ -12,7 +12,7 @@ function Products({id, title, price, rating, image}) {
               <small>Rs</small>
               <strong>{price}</strong>
             </p>
-            <div className="product__rating">⭐⭐</div>
+            <div className="product__rating">⭐⭐⭐</div>
           </div>
           <img src={image} alt="" />
           <button>add to cart</button>
