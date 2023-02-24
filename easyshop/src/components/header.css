@@ -11,6 +11,8 @@
     align-items: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    width: 100%;
 }
 .headerLogo{
     margin-left: 1rem;
