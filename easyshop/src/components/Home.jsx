@@ -1,11 +1,14 @@
 import React from 'react';
+// import Header from './Header';
 import "./Home.css";
 import Products from "./Products"
+
 
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
+        {/* <Header /> */}
         <img
           className="onlineShoppingImg"
           src="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_960_720.jpg"

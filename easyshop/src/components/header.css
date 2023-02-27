@@ -15,7 +15,11 @@
     width: 100%;
 }
 .headerLogo{
-    margin-left: 1rem;
+    margin-left: 3rem;
+    color: rgb(200, 246, 153);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 .searchInput{
     width: 35rem;
@@ -58,6 +62,7 @@
 }
 .cartAndItems{
     display: flex;
+    
 }
 .cartIcon{
     font-size: 31px;
