@@ -49,7 +49,7 @@ const list = [
   {
     id: 7,
     title:
-      "Oppo Pad Air 4 GB RAM 64 GB ROM 10.36 inch with Wi-Fi Only Tablet (Grey)",
+      "Oppo Pad Air 4 GB RAM 64 GB ROM 10.36 inch",
     price: 15693,
     img: "https://rukminim1.flixcart.com/image/416/416/l5h2xe80/tablet/f/l/g/6650287-oppo-original-imagg55sjgrashbc.jpeg?q=70",
     amount: 1,
@@ -57,14 +57,14 @@ const list = [
   {
     id: 8,
     title:
-      "Logitech POP Wireless Multi-Device Wireless Optical Mouse with Bluetooth  (Heartbreaker)",
+      "Logitech POP Wireless Multi-Device Wireless Optical Mouse with Bluetooth",
     price: 2289,
     img: "https://rukminim1.flixcart.com/image/416/416/kylvr0w0/mouse/v/8/i/pop-wireless-multi-device-logitech-original-imagasukheypwhh4.jpeg?q=70",
     amount: 1,
   },
   {
     id: 9,
-    title: "Wild Stone Edge Perfume Eau de Parfum - 50 ml  (For Men)",
+    title: "Wild Stone Edge Perfume Eau de Parfum",
     price: 280,
     img: "https://rukminim1.flixcart.com/image/416/416/k9u8zgw0/perfume/u/f/p/50-edge-perfume-eau-de-parfum-wild-stone-men-original-imafrjh8pzpqzyhg.jpeg?q=70",
     amount: 1,

@@ -33,10 +33,12 @@ function App() {
   console.log(cart)
   return (
     <Container maxWidth="md">
-      <Navbar size={cart.length} />
-      <LandingPage handleClick={handleClick} />
-      <Cart />
-      { warning && <h4 className="warning">item is already added to your cart</h4>}
+      <Navbar setShow={setShow} size={cart.length} />
+
+      {show ? <LandingPage handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} />}
+      {warning && (
+        <h4 className="warning">item is already added to your cart</h4>
+      )}
     </Container>
   );
 }

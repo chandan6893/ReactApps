@@ -10,4 +10,5 @@
     padding: 8px;
     border-radius: 6px;
     text-align: center;
+    position: fixed;
 }
