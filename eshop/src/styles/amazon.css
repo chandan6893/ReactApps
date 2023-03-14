@@ -1,0 +1,13 @@
+.warning{
+    height: 40px;
+    width: 280px;
+    right: 1rem;
+    position: absolute;
+    top:6.6%;
+    background-color: darkred;
+    font-size: 1.1rem;
+    color:white;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}
