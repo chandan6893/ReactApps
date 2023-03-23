@@ -1,0 +1,10 @@
+.result{
+    padding: 10px 20px;
+    
+}
+.result:hover{
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}

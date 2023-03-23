@@ -1,6 +1,9 @@
 .suggestionList{
-    padding: 5px 10px;
+    margin-top: 3rem;
+    padding: 20px 20px;
     width: 400px;
-    background-color: aquamarine;
+    max-height: 300px;
+    background-color:lightgray;
+    overflow-y: scroll;
     
 }
