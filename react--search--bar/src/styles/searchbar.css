@@ -1,0 +1,23 @@
+.searchBarContainer{
+    background-color: yellowgreen;
+    height: 3rem;
+    width: 26rem;
+    display: grid;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+.searchInput{
+    height: 0.9rem;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    color: royalblue;
+    font-size: large;
+}
+.searchBarIcon{
+position: absolute;
+right: 8%;
+color: royalblue;
+}
