@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import "../styles/suggestionList.css";
 
-export const SuggestionList = () => {
+export const SuggestionList = ({result}) => {
   return (
-    <div>SuggestionList</div>
+    <div>{result.map((ele,i)=>{
+      return <div className='suggestionList' key={i} >{ele.name}</div>
+    })}</div>
   )
 }

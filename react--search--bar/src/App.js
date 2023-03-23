@@ -1,13 +1,15 @@
+import React, { useState } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import { SuggestionList } from './components/SuggestionList';
 
 
 function App() {
+  const [result,setResult] = useState([])
   return (
     <div className="App">
-      <SearchBar />
-      <SuggestionList /> 
+      <SearchBar setResult={setResult} />
+      <SuggestionList result={result} /> 
     </div>
   );
 }
