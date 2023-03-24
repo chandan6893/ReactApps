@@ -1,5 +1,5 @@
 .searchBarContainer{
-    background-color: lightyellow;
+    background-color:lightblue;
     height: 3rem;
     width: 26rem;
     display: grid;
@@ -17,6 +17,7 @@
     font-size: large;
 }
 .searchBarIcon{
+    /* top: 5%; */
 position: absolute;
 right: 8%;
 color: royalblue;

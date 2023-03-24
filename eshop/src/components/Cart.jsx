@@ -1,26 +1,24 @@
 import React,{ useEffect, useState } from 'react';
 import "../styles/cart.css"
 
-function Cart({cart,setCart}) {
-  const [price,setPrice]=useState(0);
+function Cart({ cart, setCart, handleIncDecItemInCart }) {
+  const [price, setPrice] = useState(0);
 
-  const handleRemove=(id)=>{
-   const updatedArrInCart=cart.filter((ele)=>{
-      return ele.id !==id;
-    })
-    setCart(updatedArrInCart)
-  }
-  const handlePrice=()=>{
-    let ans=0;
-    cart.map((item)=>(
-      ans=ans+item.amount*item.price
-    ))
-    setPrice(ans)
-  }
+  const handleRemove = (id) => {
+    const updatedArrInCart = cart.filter((ele) => {
+      return ele.id !== id;
+    });
+    setCart(updatedArrInCart);
+  };
+  const handlePrice = () => {
+    let ans = 0;
+    cart.map((item) => (ans = ans + item.amount * item.price));
+    setPrice(ans);
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     handlePrice();
-  })
+  });
   return (
     <article>
       {cart?.map((item) => (
@@ -30,13 +28,13 @@ function Cart({cart,setCart}) {
             <p>{item.title}</p>
           </div>
           <div className="incDecAmtBtn">
-            <button>+</button>
+            <button onClick={() => handleIncDecItemInCart(item, +1)}>+</button>
             <button>{item.amount}</button>
-            <button>-</button>
+            <button onClick={() => handleIncDecItemInCart(item, -1)}>-</button>
           </div>
           <div>
             <span>₹{item.price}</span>
-            <button onClick={()=>handleRemove(item.id)} >remove</button>
+            <button onClick={() => handleRemove(item.id)}>remove</button>
           </div>
         </div>
       ))}

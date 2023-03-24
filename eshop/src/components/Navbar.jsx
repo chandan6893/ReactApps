@@ -4,10 +4,10 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const Navbar = ({size,setShow}) => {
   return (
-    <AppBar sx={{ color: "red", fontWeight: "1000" }}>
+    <AppBar sx={{  fontWeight: "1000" }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
-        <Typography onClick={()=>setShow(true)} variant="h4" component="div" sx={{ cursor: "pointer" }}>
-          eShop
+        <Typography onClick={()=>setShow(true)} variant="h4" component="div" sx={{ cursor: "pointer",color: "yellow" }}>
+          eshop
         </Typography>
         <IconButton onClick={()=>setShow(false)}>
           <AddShoppingCartIcon sx={{ color: "white", fontSize: "2.5rem" }} />

@@ -9,7 +9,7 @@ export default function SearchBar({setResult}) {
           .then((response) => response.json())
           .then((json) => {
             const results = json.filter((ele)=>{
-                return ele && ele.name && ele.name.toLowerCase().includes(value);
+                return value && ele && ele.name && ele.name.toLowerCase().includes(value);
             })
             setResult(results);
 

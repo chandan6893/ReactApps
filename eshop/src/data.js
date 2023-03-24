@@ -78,8 +78,7 @@ const list = [
   },
   {
     id: 11,
-    title:
-      "BenQ MH560 (3800 lm / 1 Speaker / Remote Controller) Full HD",
+    title:"BenQ MH560 (3800 lm / 1 Speaker / Remote Controller) Full HD",
     price: 64990,
     img: "https://rukminim1.flixcart.com/image/416/416/kppt47k0/projector/t/w/k/mh560-mh560-benq-original-imag3vu8zumhzjzp.jpeg?q=70",
     amount: 1,

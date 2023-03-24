@@ -6,7 +6,6 @@ section{
     grid-template-rows: auto;
     justify-content: center;
     align-items: center;
-    
 }
 .cards{
     width: 295px;

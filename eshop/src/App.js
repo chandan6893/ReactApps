@@ -30,12 +30,28 @@ function App() {
     setCart([...cart,item])
     
   }
-  console.log(cart)
+
+  const handleIncDecItemInCart=(item,d)=>{
+    let ind=-1;
+    cart.forEach((ele,index)=>{
+      if(ele.id===item.id){
+        ind=index;
+      }
+    })
+    let tempArr=cart;
+    tempArr[ind].amount=tempArr[ind].amount + d;
+    // tempArr[ind].amount = tempArr[ind].amount - d;   it will not work
+    if(tempArr[ind].amount===0){
+      tempArr[ind].amount=1;
+    }
+    setCart([...tempArr]) 
+  }
+  // console.log(cart)
   return (
     <Container maxWidth="md">
       <Navbar setShow={setShow} size={cart.length} />
 
-      {show ? <LandingPage handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} />}
+      {show ? <LandingPage handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleIncDecItemInCart={handleIncDecItemInCart} />}
       {warning && (
         <h4 className="warning">item is already added to your cart</h4>
       )}
