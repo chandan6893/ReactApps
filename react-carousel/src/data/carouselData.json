@@ -1,19 +1,19 @@
 {
     "slides":[
       {
-        "src": "https://picsum.photos/seed/img1/200/300",
+        "src": "https://m.media-amazon.com/images/G/31/img23/Fresh/March/SF/SF_Ice-creamFrozendessertfest_1500x300.jpg",
         "alt": "image 1"
       },
       {
-        "src": "https://picsum.photos/seed/img19/200/300",
+        "src": "https://m.media-amazon.com/images/G/31/img23/Fresh/March/SF/SF_Supersaver_Banner_1500x300.jpg",
         "alt": "image 2"
       },
       {
-        "src": "https://picsum.photos/seed/img3/200/300",
+        "src": "https://m.media-amazon.com/images/G/31/img23/Fresh/March/SF/weekend1500x300_farm-fresh_1.jpg",
         "alt": "image 3"
       },
       {
-        "src": "https://picsum.photos/seed/img4/200/300",
+        "src": "https://m.media-amazon.com/images/G/31/img23/Fresh/March/SF/NEW1500x300_1_copy.jpg",
         "alt": "image 4"
       }
     ]
