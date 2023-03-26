@@ -6,6 +6,7 @@ import LandingPage from "./components/LandingPage";
 import Cart from "./components/Cart";
 import "./styles/amazon.css"
 
+
 function App() {
   const [show,setShow] = useState(true);
   const [cart,setCart] = useState([]);
@@ -51,7 +52,7 @@ function App() {
     <Container maxWidth="md">
       <Navbar setShow={setShow} size={cart.length} />
 
-      {show ? <LandingPage handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleIncDecItemInCart={handleIncDecItemInCart} />}
+      {show ? <LandingPage  handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleIncDecItemInCart={handleIncDecItemInCart} />}
       {warning && (
         <h4 className="warning">item is already added to your cart</h4>
       )}

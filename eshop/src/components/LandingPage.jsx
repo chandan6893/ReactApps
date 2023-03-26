@@ -2,6 +2,7 @@ import React from 'react';
 import list from "../data";
 import Cards from './Cards';
 
+
 function LandingPage({handleClick}) {
   return (
     <section>

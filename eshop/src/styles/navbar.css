@@ -1,0 +1,19 @@
+.inputNdIconContainer{
+    position: relative;
+}
+.searchIcon{
+    color: royalblue;
+    position: absolute;
+    right: 5%;
+    top: 24%;
+    font-size: large;
+}
+.searchContent{
+    height: 1.7rem;
+    width: 26rem;
+    padding:0.2rem 1rem;
+    font-size: large;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+}
