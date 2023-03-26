@@ -3,15 +3,17 @@ import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "../styles/navbar.css";
 
-const Navbar = ({size,setShow}) => {
+
+const Navbar = ({size,setShow,search,setSearch,handleSearch}) => {
+  
   return (
-    <AppBar sx={{  fontWeight: "1000" }}>
+    <AppBar sx={{  fontWeight: "1000",width:"100%" }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Typography onClick={()=>setShow(true)} variant="h4" component="div" sx={{ cursor: "pointer",color: "yellow" }}>
           eshop
         </Typography>
         <Typography className='inputNdIconContainer' >
-          <input type="text" placeholder='Search here...' className='searchContent' />
+          <input type="text" placeholder='Search here...' className='searchContent' value={search} onChange={(e)=>handleSearch(e.target.value)} />
           <i className="fa-solid fa-magnifying-glass fa-beat-fade searchIcon"></i>
         </Typography>
         <IconButton onClick={()=>setShow(false)}>

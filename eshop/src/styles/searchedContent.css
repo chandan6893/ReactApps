@@ -1,0 +1,17 @@
+
+.searchedContent{
+    display: flex;
+    gap: 1rem;
+    width: 40rem;
+    padding: 0.6rem 1rem;
+    position: sticky;
+    top: 4.6rem;
+    left: 25%;
+    z-index: 150;
+    background-color: antiquewhite;
+    /* height: 15rem; */
+}
+img{
+    height: 4rem;
+    width: 3.5rem;
+}

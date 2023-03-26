@@ -4,13 +4,31 @@ import { Container } from "@mui/material";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import Cart from "./components/Cart";
-import "./styles/amazon.css"
+import "./styles/amazon.css";
+import list from "./data";
+import { SearchedContent } from "./components/SearchedContent";
 
 
 function App() {
   const [show,setShow] = useState(true);
   const [cart,setCart] = useState([]);
   const [warning,setWarning] = useState(false);
+
+  const [search,setSearch] = useState("");
+  const [searchOutput,setSearchOutput] = useState([]);
+
+  const handleSearch = (value) => {
+    const result = list.filter((item, index) => {
+      return (
+        value.trim() &&
+        item.title.trim() &&
+        item.title.trim().toLowerCase().includes(value.trim())
+      );
+    });
+    // console.log(result);
+    setSearchOutput(result);
+    setSearch(value);
+  };
 
   const handleClick=(item)=>{
     let isPresent=false;
@@ -49,13 +67,14 @@ function App() {
   }
   // console.log(cart)
   return (
-    <Container maxWidth="md">
-      <Navbar setShow={setShow} size={cart.length} />
-
+    <Container maxWidth="md" className="appContainer" >
+      <Navbar handleSearch={handleSearch} setSearch={setSearch} search={search} setShow={setShow} size={cart.length} />
+      <SearchedContent searchOutput={searchOutput} />
       {show ? <LandingPage  handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleIncDecItemInCart={handleIncDecItemInCart} />}
       {warning && (
         <h4 className="warning">item is already added to your cart</h4>
       )}
+      
     </Container>
   );
 }
