@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "../styles/searchedContent.css";
 
 
-export const SearchedContent = ({ searchOutput }) => {
-    const [state,setState] = useState(false);
-    const [singleProd,setSingleProd]= useState([]);
-    console.log(searchOutput);
+export const SearchedContent = ({ searchOutput,setState,handleSearch,setSingleProd }) => {
+    
+    
+    // console.log(searchOutput);
     const getProduct =(id)=>{
         
         const prod = searchOutput.find((ele)=>{
@@ -13,6 +13,7 @@ export const SearchedContent = ({ searchOutput }) => {
         });
         setState(true);
         setSingleProd(prod);
+        handleSearch("")
     }
   return <>{searchOutput.map((value,i)=>{
     return (

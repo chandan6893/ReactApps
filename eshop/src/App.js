@@ -17,6 +17,9 @@ function App() {
   const [search,setSearch] = useState("");
   const [searchOutput,setSearchOutput] = useState([]);
 
+  const [state, setState] = useState(false);
+  const [singleProd, setSingleProd] = useState([]);
+
   const handleSearch = (value) => {
     const result = list.filter((item, index) => {
       return (
@@ -29,6 +32,7 @@ function App() {
     setSearchOutput(result);
     setSearch(value);
   };
+  
 
   const handleClick=(item)=>{
     let isPresent=false;
@@ -68,9 +72,9 @@ function App() {
   // console.log(cart)
   return (
     <Container maxWidth="md" className="appContainer" >
-      <Navbar handleSearch={handleSearch} setSearch={setSearch} search={search} setShow={setShow} size={cart.length} />
-      <SearchedContent searchOutput={searchOutput} />
-      {show ? <LandingPage  handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleIncDecItemInCart={handleIncDecItemInCart} />}
+      <Navbar handleSearch={handleSearch} setSearch={setSearch} search={search} setState={setState} setShow={setShow} size={cart.length} />
+      <SearchedContent handleSearch={handleSearch} setState={setState} setSingleProd={setSingleProd} searchOutput={searchOutput} />
+      {show ? <LandingPage state={state} singleProd={singleProd} handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleIncDecItemInCart={handleIncDecItemInCart} />}
       {warning && (
         <h4 className="warning">item is already added to your cart</h4>
       )}

@@ -1,17 +1,20 @@
 
 .searchedContent{
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.4rem;
     width: 40rem;
-    padding: 0.6rem 1rem;
+    /* padding: 0.3rem 0.5rem; */
     position: sticky;
-    top: 4.6rem;
+    /* top: 4.6rem; */
     left: 25%;
     z-index: 150;
     background-color: antiquewhite;
+    cursor: pointer;
     /* height: 15rem; */
 }
 img{
-    height: 4rem;
-    width: 3.5rem;
+    height: 2rem;
+    width: 1.5rem;
+    cursor: pointer;
 }

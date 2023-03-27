@@ -1,16 +1,22 @@
 import React from 'react';
 import list from "../data";
 import Cards from './Cards';
+import { SingleProduct } from './SingleProduct';
 
 
-function LandingPage({handleClick}) {
+function LandingPage({handleClick,state,singleProd}) {
+  console.log(state)
   return (
     <section>
-        {list.map((item)=>{
-            return <Cards item={item} key={item.id} handleClick={handleClick} />
-        })}
+      {state ? (
+        <SingleProduct handleClick={handleClick} singleProd={singleProd} />
+      ) : (
+        list.map((item) => {
+          return <Cards item={item} key={item.id} handleClick={handleClick} />;
+        })
+      )}
     </section>
-  )
+  );
 }
 
 export default LandingPage
