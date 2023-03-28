@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./carousel.css";
+import "../styles/carousel.css";
 
 export const Carousel = ({ slides }) => {
   const [slideImg, setSlideImg] = useState(0);

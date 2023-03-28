@@ -8,9 +8,6 @@ import "./styles/amazon.css";
 import list from "./data";
 import { SearchedContent } from "./components/SearchedContent";
 
-import { Carousel } from "./components/Carousel";
-import slides from "./data/carouselData";
-import Footer from "./components/Footer";
 
 
 function App() {
@@ -84,8 +81,6 @@ function App() {
       {warning && (
         <h4 className="warning">item is already added to your cart</h4>
       )}
-      <Carousel slides={slides} />
-      <Footer />
     </Container>
   );
 }
