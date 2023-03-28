@@ -7,6 +7,7 @@
     right: 5%;
     top: 24%;
     font-size: large;
+    cursor: pointer;
 }
 .searchContent{
     height: 1.7rem;

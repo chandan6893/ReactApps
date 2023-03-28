@@ -5,7 +5,6 @@ import { SingleProduct } from './SingleProduct';
 
 
 function LandingPage({handleClick,state,singleProd}) {
-  console.log(state)
   return (
     <section>
       {state ? (

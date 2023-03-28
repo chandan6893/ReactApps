@@ -8,6 +8,10 @@ import "./styles/amazon.css";
 import list from "./data";
 import { SearchedContent } from "./components/SearchedContent";
 
+import { Carousel } from "./components/Carousel";
+import slides from "./data/carouselData";
+import Footer from "./components/Footer";
+
 
 function App() {
   const [show,setShow] = useState(true);
@@ -73,12 +77,15 @@ function App() {
   return (
     <Container maxWidth="md" className="appContainer" >
       <Navbar handleSearch={handleSearch} setSearch={setSearch} search={search} setState={setState} setShow={setShow} size={cart.length} />
+      
       <SearchedContent handleSearch={handleSearch} setState={setState} setSingleProd={setSingleProd} searchOutput={searchOutput} />
+      
       {show ? <LandingPage state={state} singleProd={singleProd} handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleIncDecItemInCart={handleIncDecItemInCart} />}
       {warning && (
         <h4 className="warning">item is already added to your cart</h4>
       )}
-      
+      <Carousel slides={slides} />
+      <Footer />
     </Container>
   );
 }

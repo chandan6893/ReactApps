@@ -1,0 +1,40 @@
+.footer{
+  background-color:#172337;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  position: absolute;
+  height: 270px;
+  width: 1340px;
+    top: 289%;
+    left: 0%;
+  }
+  li,h3{
+    cursor: pointer;
+  }
+ul{
+  list-style-type: none;
+  text-align: left;
+  margin-right: 7rem;
+  margin-bottom: 0.7rem;
+}
+.footer-about ul{
+  text-align: left;
+
+}
+.footer-address p{
+  text-align: left;
+}
+.footer h3{
+    margin-left: 2.4rem;
+    color: lightblue;
+}
+.footer-address h3{
+    margin-left: 0rem;
+}
+ul li{
+    margin-bottom: 0.6rem;
+}
