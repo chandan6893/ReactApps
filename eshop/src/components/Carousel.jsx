@@ -10,7 +10,7 @@ export const Carousel = ({ slides }) => {
   const nextSlide = () => {
     setSlideImg(slideImg === slides.length - 1 ? 0 : slideImg + 1);
   };
-  // console.log(slides)
+  
   return (
     <div className="carousel">
       <i

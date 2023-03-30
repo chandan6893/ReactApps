@@ -29,7 +29,7 @@ function App() {
         item.title.trim().toLowerCase().includes(value.trim())
       );
     });
-    // console.log(result);
+    
     setSearchOutput(result);
     setSearch(value);
   };
@@ -70,7 +70,7 @@ function App() {
     }
     setCart([...tempArr]) 
   }
-  // console.log(cart)
+  
   return (
     <Container maxWidth="md" className="appContainer" >
       <Navbar handleSearch={handleSearch} setSearch={setSearch} search={search} setState={setState} setShow={setShow} size={cart.length} />
