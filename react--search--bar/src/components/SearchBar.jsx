@@ -23,7 +23,7 @@ export default function SearchBar({setResult}) {
     <>
       <div className="searchBarContainer">
         <input className='searchInput' type="text" placeholder="Search here..." value={inputData} onChange={(e)=>handleSearhBar(e.target.value)} />
-        <i className="fa-solid fa-magnifying-glass fa-fade searchBarIcon "></i>
+        <i className="fa-solid fa-magnifying-glass fa-fade searchBarIcon " ></i>
       </div>
     </>
   );

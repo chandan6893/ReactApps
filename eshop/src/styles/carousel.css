@@ -24,12 +24,13 @@
 }
 .arrow-left{
     left: 1rem;
-    color: white;
+    color:#555;
     font-size: 2rem;
+    
 }
 .arrow-right{
     right: 1rem;
-    color: white;
+    color:#555;
     font-size: 2rem;
 }
 .indicator{

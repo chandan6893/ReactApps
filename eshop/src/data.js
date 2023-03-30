@@ -1,22 +1,21 @@
 const list = [
   {
     id: 1,
-    title: "WOODLAND Outdoor Shoe For Men  (Brown)",
-    price: 1890,
-    img: "https://rukminim1.flixcart.com/fk-p-flap/200/200/image/5aa98b7cee183286.jpg?q=70",
+    title: "Nivea Men Body Wash,  Shower Gel For Body, Face & Hair, 250 ml",
+    price: 179,
+    img: "https://m.media-amazon.com/images/I/61IjBljRV1L._SX569_.jpg",
     amount: 1,
   },
   {
     id: 2,
-    title: "Men Solid Hooded Neck Black T-Shirt",
-    price: 447,
-    img: "https://rukminim1.flixcart.com/image/832/832/l26hdow0/shopsy-t-shirt/s/t/o/xxl-bmi-try-this-original-imagdkndeb99vgxu.jpeg?q=70",
+    title: "Khushal K Women's Rayon Flared Kurta And Palazzo With Dupatta Set",
+    price: 1427,
+    img: "https://m.media-amazon.com/images/I/61DJyRZ2byL._UX679_.jpg",
     amount: 1,
   },
   {
     id: 3,
-    title:
-      "OnePlus Bullets Z2 Bluetooth Wireless in Ear Earphones with Mic",
+    title: "OnePlus Bullets Z2 Bluetooth Wireless in Ear Earphones with Mic",
     price: 1643,
     img: "https://m.media-amazon.com/images/I/514m1VhSUUL._AC_UL320_.jpg",
     amount: 1,
@@ -48,8 +47,7 @@ const list = [
   },
   {
     id: 7,
-    title:
-      "Oppo Pad Air 4 GB RAM 64 GB ROM 10.36 inch",
+    title: "Oppo Pad Air 4 GB RAM 64 GB ROM 10.36 inch",
     price: 15693,
     img: "https://rukminim1.flixcart.com/image/416/416/l5h2xe80/tablet/f/l/g/6650287-oppo-original-imagg55sjgrashbc.jpeg?q=70",
     amount: 1,
@@ -78,7 +76,7 @@ const list = [
   },
   {
     id: 11,
-    title:"BenQ MH560 (3800 lm / 1 Speaker / Remote Controller) Full HD",
+    title: "BenQ MH560 (3800 lm / 1 Speaker / Remote Controller) Full HD",
     price: 64990,
     img: "https://rukminim1.flixcart.com/image/416/416/kppt47k0/projector/t/w/k/mh560-mh560-benq-original-imag3vu8zumhzjzp.jpeg?q=70",
     amount: 1,
