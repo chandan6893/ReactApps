@@ -8,6 +8,8 @@ import slides from "../data/carouselData";
 import Footer from "../components/Footer";
 
 function LandingPage({handleClick,state,singleProd}) {
+
+  
   return (
     <>
       {state ? (
