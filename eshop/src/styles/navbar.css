@@ -18,3 +18,21 @@
     outline: none;
     border-radius: 0.2rem;
 }
+.logoutBtn{
+    background-color:thistle;
+    border: none;
+    padding: 7px 13px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.loginBtn{
+    background-color:thistle;
+    border: none;
+    padding: 7px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
