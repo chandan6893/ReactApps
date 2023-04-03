@@ -1,3 +1,7 @@
+
+body{
+  overflow-x: hidden;
+}
 .card{
   background-color: aqua;
   color: red;
@@ -6,4 +10,3 @@
   margin-top: 4.59rem;
   height: 100%;
 }
-
