@@ -5,6 +5,7 @@ const list = [
     price: 179,
     img: "https://m.media-amazon.com/images/I/61IjBljRV1L._SX569_.jpg",
     amount: 1,
+    category: "men",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const list = [
     price: 1427,
     img: "https://m.media-amazon.com/images/I/61DJyRZ2byL._UX679_.jpg",
     amount: 1,
+    category: "women",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const list = [
     price: 1643,
     img: "https://m.media-amazon.com/images/I/514m1VhSUUL._AC_UL320_.jpg",
     amount: 1,
+    category: "electronics",
   },
   {
     id: 4,
@@ -27,6 +30,7 @@ const list = [
     price: 11499,
     img: "https://m.media-amazon.com/images/I/41CK1CvkW6L._SX300_SY300_QL70_FMwebp_.jpg",
     amount: 1,
+    category: "electronics",
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ const list = [
     price: 119990,
     img: "https://m.media-amazon.com/images/I/71l4M2y8zwL._SY450_.jpg",
     amount: 1,
+    category: "electronics",
   },
   {
     id: 6,
@@ -44,6 +49,7 @@ const list = [
     price: 3235,
     img: "https://m.media-amazon.com/images/I/61jFUjF71kL._SY450_.jpg",
     amount: 1,
+    category: "electronics",
   },
   {
     id: 7,
@@ -51,6 +57,7 @@ const list = [
     price: 15693,
     img: "https://rukminim1.flixcart.com/image/416/416/l5h2xe80/tablet/f/l/g/6650287-oppo-original-imagg55sjgrashbc.jpeg?q=70",
     amount: 1,
+    category: "electronics",
   },
   {
     id: 8,
@@ -59,6 +66,7 @@ const list = [
     price: 2289,
     img: "https://rukminim1.flixcart.com/image/416/416/kylvr0w0/mouse/v/8/i/pop-wireless-multi-device-logitech-original-imagasukheypwhh4.jpeg?q=70",
     amount: 1,
+    category: "electronics",
   },
   {
     id: 9,
@@ -73,6 +81,7 @@ const list = [
     price: 789,
     img: "https://rukminim1.flixcart.com/image/832/832/xif0q/jacket/f/s/f/xl-no-u27-jkt-wind-american-grey-ad-av-original-imagjkhhhjsgdfgz.jpeg?q=70",
     amount: 1,
+    category: "men",
   },
   {
     id: 11,
@@ -80,6 +89,7 @@ const list = [
     price: 64990,
     img: "https://rukminim1.flixcart.com/image/416/416/kppt47k0/projector/t/w/k/mh560-mh560-benq-original-imag3vu8zumhzjzp.jpeg?q=70",
     amount: 1,
+    category: "electronics",
   },
   {
     id: 12,

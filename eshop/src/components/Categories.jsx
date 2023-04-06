@@ -1,7 +1,7 @@
-import React from 'react';
-import "../styles/card.css"
+import React from "react";
+import "../styles/card.css";
 
-function Cards({ item, handleClick, categoryData, categoryState }) {
+function Categories({ item, handleClick, categoryData }) {
   const { title, img, price } = item;
 
   return (
@@ -20,4 +20,4 @@ function Cards({ item, handleClick, categoryData, categoryState }) {
   );
 }
 
-export default Cards
+export default Categories;
