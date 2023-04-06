@@ -1,4 +1,3 @@
-// import React from 'react';
 import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "../styles/navbar.css";
@@ -11,7 +10,7 @@ import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 
 const Navbar = ({
   size,
@@ -29,12 +28,17 @@ const Navbar = ({
     setAge(event.target.value);
   };
 
+  // const { loginWithRedirect, logout, isAuthenticated} = useAuth0();
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
+ 
   const handleShowAndState = () => {
     setShow(true);
     setState(false);
+    setCategoryData(list);
   };
+
+  
 
   const filterResult = (type) => {
     const selectedCategory = list.filter((currentItem) => {
@@ -66,7 +70,7 @@ const Navbar = ({
           <i className="fa-solid fa-magnifying-glass fa-beat-fade searchIcon"></i>
         </Typography>
         <Box sx={{ minWidth: 120 }}>
-          <FormControl fullWidth>
+          <FormControl fullWidth sx={{ margin: "7px 0px" }}>
             <InputLabel id="demo-simple-select-label">Category</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -75,45 +79,64 @@ const Navbar = ({
               label="Category"
               onChange={handleChange}
             >
-              <MenuItem value={20} onClick={() => setCategoryData(list)}>
+              <MenuItem
+                className="menuItem"
+                sx={{ margin: "3px 0px" }}
+                value={10}
+                onClick={() => setCategoryData(list)}
+              >
                 All Products
               </MenuItem>
-              <MenuItem value={10} onClick={() => filterResult("men")}>
+              <MenuItem
+                sx={{ margin: "3px 0px" }}
+                value={20}
+                onClick={() => filterResult("men")}
+              >
                 Men
               </MenuItem>
-              <MenuItem value={20} onClick={() => filterResult("women")}>
+              <MenuItem
+                sx={{ margin: "3px 0px" }}
+                value={30}
+                onClick={() => filterResult("women")}
+              >
                 Women
               </MenuItem>
-              <MenuItem value={20} onClick={() => filterResult("electronics")}>
+              <MenuItem
+                sx={{ margin: "3px 0px" }}
+                value={40}
+                onClick={() => filterResult("electronics")}
+              >
                 Electronics
               </MenuItem>
             </Select>
           </FormControl>
         </Box>
-        {/* {isAuthenticated &&
-          <Typography>
-           <span>{user.name}</span>
-           </Typography>
-           } */}
+        <Typography>
+          {isAuthenticated && (
+            <Typography className="userName" >
+              <span>{user.name}</span>
+            </Typography>
+          )}
 
-        {isAuthenticated ? (
-          <Typography>
-            <button
-              className="logoutBtn"
-              onClick={() =>
-                logout({ logoutParams: { returnTo: window.location.origin } })
-              }
-            >
-              Log Out
-            </button>
-          </Typography>
-        ) : (
-          <Typography>
-            <button className="loginBtn" onClick={() => loginWithRedirect()}>
-              Log In
-            </button>
-          </Typography>
-        )}
+          {isAuthenticated ? (
+            <Typography>
+              <button
+                className="logoutBtn"
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
+              >
+                Log Out
+              </button>
+            </Typography>
+          ) : (
+            <Typography>
+              <button className="loginBtn" onClick={() => loginWithRedirect()}>
+                Log In
+              </button>
+            </Typography>
+          )}
+        </Typography>
         <IconButton onClick={() => setShow(false)}>
           <AddShoppingCartIcon sx={{ color: "white", fontSize: "2.5rem" }} />
           <Typography

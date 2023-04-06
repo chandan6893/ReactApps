@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    width: 41rem;
+    width: 27.30rem;
     position: sticky;
-    left: 25.7%;
+    /* left: 1.7%; */
     z-index: 150;
     background-color: antiquewhite;
     cursor: pointer;
