@@ -28,7 +28,7 @@ const Navbar = ({
     setAge(event.target.value);
   };
 
-  // const { loginWithRedirect, logout, isAuthenticated} = useAuth0();
+  
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
  
@@ -111,7 +111,7 @@ const Navbar = ({
             </Select>
           </FormControl>
         </Box>
-        <Typography>
+        <Typography className="loginLogout" sx={{position:"relative"}}>
           {isAuthenticated && (
             <Typography className="userName" >
               <span>{user.name}</span>

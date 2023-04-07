@@ -19,23 +19,33 @@
     border-radius: 0.2rem;
 }
 .logoutBtn{
-    background-color:thistle;
+    background-color:gray;
+    color:darkslateblue;
     border: none;
     padding: 2px 10px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 18px;
+    position: fixed;
+    right: 15rem;
+    top:36px;
 }
 .loginBtn{
-    background-color:thistle;
+    background-color:gray;
+    color:darkslateblue;
     border: none;
     padding: 2px 16px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 0.7rem;
-    margin-right: 5rem;
+    position: fixed;
+    right: 15rem;
+    top:36px;
+}
+.userName{
+    top: 8px;
+    position: fixed;
+    right: 13.3rem;
 }

@@ -5,7 +5,7 @@ import "../styles/searchedContent.css";
 export const SearchedContent = ({ searchOutput,setState,handleSearch,setSingleProd }) => {
     
     
-    // console.log(searchOutput);
+   
     const getProduct =(id)=>{
         
         const prod = searchOutput.find((ele)=>{
@@ -13,7 +13,7 @@ export const SearchedContent = ({ searchOutput,setState,handleSearch,setSinglePr
         });
         setState(true);
         setSingleProd(prod);
-        handleSearch("")
+        handleSearch("");
     }
   return <>{searchOutput.map((value,i)=>{
     return (
