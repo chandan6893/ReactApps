@@ -45,7 +45,7 @@ ul li{
   background-color:#172337;
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  /* justify-content: center; */
+  justify-content: center;
   gap: 0.3rem;
   color: #fff;
   font-weight: 400;
@@ -57,4 +57,22 @@ ul li{
     left: 0%;
     overflow: hidden;
   }
+}
+
+@media (min-width:414px) and (max-width:820px){
+ .footer{
+  background-color:#172337;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  position: absolute;
+  height: 170px;
+  width: 1340px;
+    top: 1000%;
+    left: 0%;
+    overflow: hidden;
+  } 
 }
