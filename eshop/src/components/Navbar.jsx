@@ -12,6 +12,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
+import MenuSharpIcon from "@mui/icons-material/MenuSharp";
+
 const Navbar = ({
   size,
   setShow,
@@ -21,6 +23,7 @@ const Navbar = ({
   handleSearch,
   setCategoryData,
   setCategoryState,
+  setSearchOutput,
 }) => {
   const [age, setAge] = React.useState("");
 
@@ -28,17 +31,13 @@ const Navbar = ({
     setAge(event.target.value);
   };
 
-  
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
- 
   const handleShowAndState = () => {
     setShow(true);
     setState(false);
     setCategoryData(list);
   };
-
-  
 
   const filterResult = (type) => {
     const selectedCategory = list.filter((currentItem) => {
@@ -49,9 +48,10 @@ const Navbar = ({
   };
 
   return (
-    <AppBar sx={{ fontWeight: "1000", width: "100%" }}>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
+    <AppBar className="appBar" sx={{ fontWeight: "1000", width: "100%" }}>
+      <Toolbar sx={{ justifyContent: "space-between" ,position:"relative"}}>
         <Typography
+          className="webTitle"
           onClick={handleShowAndState}
           variant="h4"
           component="div"
@@ -69,8 +69,9 @@ const Navbar = ({
           />
           <i className="fa-solid fa-magnifying-glass fa-beat-fade searchIcon"></i>
         </Typography>
-        <Box sx={{ minWidth: 120 }}>
-          <FormControl fullWidth sx={{ margin: "7px 0px" }}>
+        <Typography className="category" >
+        <Box  sx={{ minWidth: 120 }}>
+          <FormControl  fullWidth sx={{ margin: "7px 0px" }}>
             <InputLabel id="demo-simple-select-label">Category</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -111,9 +112,10 @@ const Navbar = ({
             </Select>
           </FormControl>
         </Box>
-        <Typography className="loginLogout" sx={{position:"relative"}}>
+        </Typography>
+        <Typography  className="loginLogout" sx={{ position: "relative" }}>
           {isAuthenticated && (
-            <Typography className="userName" >
+            <Typography className="userName">
               <span>{user.name}</span>
             </Typography>
           )}
@@ -137,7 +139,7 @@ const Navbar = ({
             </Typography>
           )}
         </Typography>
-        <IconButton onClick={() => setShow(false)}>
+        <IconButton className="cart" onClick={() => setShow(false)}>
           <AddShoppingCartIcon sx={{ color: "white", fontSize: "2.5rem" }} />
           <Typography
             component="span"
@@ -146,6 +148,11 @@ const Navbar = ({
             {size}
           </Typography>
         </IconButton>
+        <Typography className="menuBar">
+          <IconButton>
+            <MenuSharpIcon />
+          </IconButton>
+        </Typography>
       </Toolbar>
     </AppBar>
   );

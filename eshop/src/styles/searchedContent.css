@@ -14,3 +14,17 @@ img{
     width: 1.5rem;
     cursor: pointer;
 }
+/* responsive searchedContent*/
+@media (max-width:414px){
+    .searchedContent{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: 24.30rem;
+    position: sticky;
+    z-index: 150;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+}

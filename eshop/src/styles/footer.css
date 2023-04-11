@@ -38,3 +38,23 @@ ul{
 ul li{
     margin-bottom: 0.6rem;
 }
+
+/* responsive footer */
+@media  (max-width:414px){
+  .footer{
+  background-color:#172337;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* justify-content: center; */
+  gap: 0.3rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  position: absolute;
+  height: 157px;
+  width: 414px;
+    top: 678%;
+    left: 0%;
+    overflow: hidden;
+  }
+}

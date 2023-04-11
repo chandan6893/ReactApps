@@ -34,6 +34,7 @@ function App() {
     
     setSearchOutput(result);
     setSearch(value);
+    
   };
   
 
@@ -75,7 +76,7 @@ function App() {
   
   return (
     <Container maxWidth="md" className="appContainer" >
-      <Navbar handleSearch={handleSearch} setSearch={setSearch} search={search} setState={setState} setShow={setShow} size={cart.length} setCategoryData={setCategoryData} setCategoryState={setCategoryState} />
+      <Navbar handleSearch={handleSearch} setSearch={setSearch} search={search} setState={setState} setShow={setShow} size={cart.length} setCategoryData={setCategoryData} setCategoryState={setCategoryState} setSearchOutput={setSearchOutput} />
       
       <SearchedContent handleSearch={handleSearch} setState={setState} setSingleProd={setSingleProd} searchOutput={searchOutput} />
       
