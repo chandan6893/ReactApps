@@ -73,12 +73,15 @@
     border-radius: 0.1rem;
 }
 .inputNdIconContainer {
-    left: -24%;
+    left: -23%;
     right: -55%;
     top: 65%;
 }
 .cart{
    left: -71%;
+}
+.loginLogout{
+   display: none;
 }
 }
 
@@ -102,7 +105,7 @@
 }
 .loginLogout{
    display: none;
-   left: -64%;
+   /* left: -64%; */
 }
 .category{
     display: none;
