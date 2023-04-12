@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: lightsteelblue;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.inputAndAddBtn{
+  background-color: yellow;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:80vh;
+  height: 4rem;
+  margin-top: -16rem;
+}
+.inputAndAddBtn input{
+  width: 22rem;
+  height: 2rem;
+  outline: none;
+  border: none;
+  padding: 0.6rem;
+  font-size: large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: lavender;
+  color: black;
+  border-radius: 0.3rem;
+}
+.inputAndAddBtn button{
+  width: 5rem;
+  height: 2rem;
+  outline: none;
+  border: none;
+  padding: 0.6rem;
+  font-size: small;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:yellowgreen;
+  color: white;
+  border-radius: 0.3rem;
+}
