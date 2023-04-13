@@ -20,6 +20,19 @@ console.log("DATA==>",data,enterItem.length)
           <input type="text" placeholder="Add Items..." value={enterItem} onChange={(e)=>setEnterItem(e.target.value)} />
           <button onClick={handleAddItems} >Add</button>
         </div>
+        <div className='mapContainer' >
+          {data.map((item,i)=>{
+            return (
+              <div className="itemEditSave" key={i}>
+                <h3>{item}</h3>
+                <div>
+                  <button>Edit</button>
+                  <button>Save</button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     
   );

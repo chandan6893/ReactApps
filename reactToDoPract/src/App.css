@@ -43,3 +43,19 @@ body{
   color: white;
   border-radius: 0.3rem;
 }
+.mapContainer{
+  background-color: aqua;
+ 
+}
+.itemEditSave{
+  /* background-color: violet; */
+  display: flex;
+  justify-content: space-evenly;
+  row-gap: 11rem;
+  margin: 1rem 0.5rem 0 0.4rem;
+  
+}
+h3{
+  width: 14rem;
+  overflow: hidden;
+}
