@@ -44,13 +44,28 @@ body{
   height: 2.2rem;
   outline: none;
   border: none;
-  padding: 0.6rem;
-  font-size: small;
+  padding: 0.6rem 1rem;
+  font-size: large;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color:royalblue;
   color: white;
   border-radius: 0.3rem;
   outline: none;
+  cursor: pointer;
+}
+#update{
+   width: 6.5rem;
+  height: 2.2rem;
+  outline: none;
+  border: none;
+  padding: 0.6rem;
+  font-size: small;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:darkslateblue;
+  color: white;
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer;
 }
 .mapContainer{
   /* background-color: aqua; */
@@ -76,6 +91,9 @@ h3{
 .editNdSaveBtn button{
   width: 6rem;
   height: 2.6rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3rem;
 }
 #editBtn{
   background-color: lightslategray;
