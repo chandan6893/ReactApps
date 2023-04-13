@@ -6,18 +6,20 @@ function App() {
   const [enterItem,setEnterItem] = useState("");
   const [data,setData] = useState([])
   
+  
+
+
 const handleAddItems =()=>{
-  if(enterItem.length !==0 ){
+  if (enterItem.length !== 0) {
     setData([...data, enterItem]);
   }
-  setEnterItem(" ");
-}
-console.log("DATA==>",data,enterItem.length)
+  setEnterItem("");
+};
   return (
     
       <div className="App">
         <div className='inputAndAddBtn'>
-          <input type="text" placeholder="Add Items..." value={enterItem} onChange={(e)=>setEnterItem(e.target.value)} />
+          <input type="text" placeholder='Add Items' value={enterItem} onChange={(e)=>setEnterItem(e.target.value)} />
           <button onClick={handleAddItems} >Add</button>
         </div>
         <div className='mapContainer' >
@@ -25,9 +27,10 @@ console.log("DATA==>",data,enterItem.length)
             return (
               <div className="itemEditSave" key={i}>
                 <h3>{item}</h3>
-                <div>
-                  <button>Edit</button>
-                  <button>Save</button>
+                <div className='editNdSaveBtn'>
+                  <button id='editBtn'>Edit</button>
+                  <button id='saveBtn'>Save</button>
+                  <button id='deleteBtn'>Delete</button>
                 </div>
               </div>
             );

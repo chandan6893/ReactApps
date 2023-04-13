@@ -5,23 +5,31 @@
 }
 body{
   background-color: lightsteelblue;
+}
+.App{
+  font-family: sans-serif;
+  text-align: center;
+  width: 100vw;
   display: flex;
-  justify-content: center;
-  
+  align-items: center;
+  flex-direction: column;
 }
 
 .inputAndAddBtn{
-  background-color: yellow;
+  /* background-color: yellow; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width:80vh;
   height: 4rem;
-  margin-top: -16rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  gap: 4rem;
+  margin-top: 4rem; 
+  position: absolute;
 }
 .inputAndAddBtn input{
-  width: 22rem;
-  height: 2rem;
+  width: 26rem;
+  height: 2.2rem;
   outline: none;
   border: none;
   padding: 0.6rem;
@@ -32,30 +40,56 @@ body{
   border-radius: 0.3rem;
 }
 .inputAndAddBtn button{
-  width: 5rem;
-  height: 2rem;
+  width: 6.5rem;
+  height: 2.2rem;
   outline: none;
   border: none;
   padding: 0.6rem;
   font-size: small;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color:yellowgreen;
+  background-color:royalblue;
   color: white;
   border-radius: 0.3rem;
+  outline: none;
 }
 .mapContainer{
-  background-color: aqua;
- 
+  /* background-color: aqua; */
+ width: auto;
+
+ margin-top: 11%;
 }
 .itemEditSave{
-  /* background-color: violet; */
   display: flex;
-  justify-content: space-evenly;
-  row-gap: 11rem;
-  margin: 1rem 0.5rem 0 0.4rem;
-  
+  padding: 1rem;
+  width: auto;
 }
 h3{
   width: 14rem;
   overflow: hidden;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+.editNdSaveBtn{
+  display: flex;
+  gap: 1.6rem;
+}
+.editNdSaveBtn button{
+  width: 6rem;
+  height: 2.6rem;
+}
+#editBtn{
+  background-color: lightslategray;
+  color: greenyellow;
+  text-align: center;
+  outline: none;
+}
+#saveBtn{
+  background-color: darkgreen;
+  color:white;
+  outline: none;
+}
+#deleteBtn{
+  background-color: darkred;
+  color: yellow;
+  outline: none;
 }
