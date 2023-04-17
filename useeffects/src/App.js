@@ -18,11 +18,24 @@
 
 // export default App;
 
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
-export const App = () => {
+ const App = () => {
+  const [date,setDate]=useState(new Date());
+  useEffect(()=>{
+    const timer=setInterval(()=>{
+      setDate(new Date());
+    },1000);
+    return ()=>{
+      clearInterval(timer);
+    }
+  })
   return (
-    <div>App</div>
+    <>
+    <h3>{date.toDateString()}</h3>
+    <h4>{date.toLocaleTimeString()}</h4>
+    </>
   )
 }
+export default App;
 
