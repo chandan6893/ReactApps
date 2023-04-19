@@ -1,0 +1,62 @@
+.IndiaAbroadBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.indAbroadCard{
+    margin: 2.9rem 0 2.9rem 0;
+    background-color: bisque;
+    box-shadow: rgba(0, 0, 0, 0.653) 0px 5px 15px; 
+}
+.imgCompNdMedCourses{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .IndiaAbroadBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.indAbroadCard{
+  
+    margin: 1rem 0 1rem 0;
+}
+.imgCompNdMedCourses{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerOfTopCourses{
+height: 150vh;
+
+}
+.firstCardOfTopCourses{
+    top: 50%;
+    position: absolute;
+    width: 30%;
+}
+.secondCardOfTopCourses{
+    top: 300%;
+    left: -10%;
+    position: absolute;
+    width: 30%;
+}
+.containerOfimgCompNdMedCourses{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.firstCardOfTopCourses{
+left: 10%;
+position: absolute;
+}
+}
