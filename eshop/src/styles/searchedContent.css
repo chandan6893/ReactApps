@@ -15,7 +15,7 @@ img{
     cursor: pointer;
 }
 /* responsive searchedContent*/
-@media (max-width:414px){
+/* @media (max-width:414px){
     .searchedContent{
     display: flex;
     align-items: center;
@@ -27,4 +27,4 @@ img{
     cursor: pointer;
 }
 
-}
+} */

@@ -6,11 +6,14 @@ import list from "../data";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 
@@ -47,9 +50,14 @@ const Navbar = ({
     setCategoryState(true);
   };
 
+  const [menu,setMenu] = useState(false);
+
   return (
     <AppBar className="appBar" sx={{ fontWeight: "1000", width: "100%" }}>
-      <Toolbar sx={{ justifyContent: "space-between" ,position:"relative"}}>
+      <Toolbar
+        className="toolBar"
+        sx={{ justifyContent: "space-between", position: "relative" }}
+      >
         <Typography
           className="webTitle"
           onClick={handleShowAndState}
@@ -59,6 +67,7 @@ const Navbar = ({
         >
           eshop
         </Typography>
+
         <Typography className="inputNdIconContainer">
           <input
             type="text"
@@ -69,88 +78,107 @@ const Navbar = ({
           />
           <i className="fa-solid fa-magnifying-glass fa-beat-fade searchIcon"></i>
         </Typography>
-        <Typography className="category" >
-        <Box  sx={{ minWidth: 120 }}>
-          <FormControl  fullWidth sx={{ margin: "7px 0px" }}>
-            <InputLabel id="demo-simple-select-label">Category</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={age}
-              label="Category"
-              onChange={handleChange}
-            >
-              <MenuItem
-                className="menuItem"
-                sx={{ margin: "3px 0px" }}
-                value={10}
-                onClick={() => setCategoryData(list)}
-              >
-                All Products
-              </MenuItem>
-              <MenuItem
-                sx={{ margin: "3px 0px" }}
-                value={20}
-                onClick={() => filterResult("men")}
-              >
-                Men
-              </MenuItem>
-              <MenuItem
-                sx={{ margin: "3px 0px" }}
-                value={30}
-                onClick={() => filterResult("women")}
-              >
-                Women
-              </MenuItem>
-              <MenuItem
-                sx={{ margin: "3px 0px" }}
-                value={40}
-                onClick={() => filterResult("electronics")}
-              >
-                Electronics
-              </MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
-        </Typography>
-        <Typography  className="loginLogout" sx={{ position: "relative" }}>
-          {isAuthenticated && (
-            <Typography className="userName">
-              <span>{user.name}</span>
-            </Typography>
-          )}
-
-          {isAuthenticated ? (
-            <Typography>
-              <button
-                className="logoutBtn"
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
-              >
-                Log Out
-              </button>
-            </Typography>
-          ) : (
-            <Typography>
-              <button className="loginBtn" onClick={() => loginWithRedirect()}>
-                Log In
-              </button>
-            </Typography>
-          )}
-        </Typography>
-        <IconButton className="cart" onClick={() => setShow(false)}>
-          <AddShoppingCartIcon sx={{ color: "white", fontSize: "2.5rem" }} />
-          <Typography
-            component="span"
-            sx={{ color: "yellow", fontWeight: "1000" }}
-          >
-            {size}
+        <Box className={menu === false ? "navMenu navActive" : "navMenu"} onClick={() => {
+                setMenu(!menu);
+              }} >
+          <Typography className="category">
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl fullWidth sx={{ margin: "7px 0px" }}>
+                <InputLabel id="demo-simple-select-label">Category</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={age}
+                  label="Category"
+                  onChange={handleChange}
+                >
+                  <MenuItem
+                    className="menuItem"
+                    sx={{ margin: "3px 0px" }}
+                    value={10}
+                    onClick={() => setCategoryData(list)}
+                  >
+                    All Products
+                  </MenuItem>
+                  <MenuItem
+                    sx={{ margin: "3px 0px" }}
+                    value={20}
+                    onClick={() => filterResult("men")}
+                  >
+                    Men
+                  </MenuItem>
+                  <MenuItem
+                    sx={{ margin: "3px 0px" }}
+                    value={30}
+                    onClick={() => filterResult("women")}
+                  >
+                    Women
+                  </MenuItem>
+                  <MenuItem
+                    sx={{ margin: "3px 0px" }}
+                    value={40}
+                    onClick={() => filterResult("electronics")}
+                  >
+                    Electronics
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
           </Typography>
-        </IconButton>
-        <Typography className="menuBar">
+          <Typography className="loginLogout" sx={{ position: "relative" }}>
+            {isAuthenticated && (
+              <Typography className="userName">
+                <span>{user.name}</span>
+              </Typography>
+            )}
+
+            {isAuthenticated ? (
+              <Typography>
+                <button
+                  className="logoutBtn"
+                  onClick={() =>
+                    logout({
+                      logoutParams: { returnTo: window.location.origin },
+                    })
+                  }
+                >
+                  Log Out
+                </button>
+              </Typography>
+            ) : (
+              <Typography>
+                <button
+                  className="loginBtn"
+                  onClick={() => loginWithRedirect()}
+                >
+                  Log In
+                </button>
+              </Typography>
+            )}
+          </Typography>
+
+          <IconButton className="cart" onClick={() => setShow(false)}>
+            <AddShoppingCartIcon sx={{ color: "white", fontSize: "2.5rem" }} />
+            <Typography
+              component="span"
+              sx={{ color: "yellow", fontWeight: "1000" }}
+            >
+              {size}
+            </Typography>
+          </IconButton>
+        </Box>
+
+        <Typography className="bar">
           <IconButton>
-            <MenuSharpIcon />
+            <MenuSharpIcon
+              className="menuBar"
+              onClick={() => {
+                setMenu(!menu);
+              }}
+            />
+          </IconButton>
+          <IconButton>
+            <CloseIcon className="closeBar" />
           </IconButton>
         </Typography>
       </Toolbar>

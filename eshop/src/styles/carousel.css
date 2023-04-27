@@ -52,7 +52,7 @@
 }
 
 /* responsive carousel */
-@media (max-width:414px){
+/* @media (max-width:414px){
    .carousel{
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@
     width: 414px;
     height: 150px;
     position: absolute;
-    top: 662%;
+    top: 1056%;
 } 
 .slideImg{
     width: 100%;
@@ -78,4 +78,4 @@
     position: absolute;
     top: 976%;
 } 
-}
+} */
