@@ -12,7 +12,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 import MenuSharpIcon from "@mui/icons-material/MenuSharp";
@@ -50,7 +50,7 @@ const Navbar = ({
     setCategoryState(true);
   };
 
-  const [menu,setMenu] = useState(false);
+  const [menu,setMenu] = useState(true);
 
   return (
     <AppBar className="appBar" sx={{ fontWeight: "1000", width: "100%" }}>
@@ -78,9 +78,12 @@ const Navbar = ({
           />
           <i className="fa-solid fa-magnifying-glass fa-beat-fade searchIcon"></i>
         </Typography>
-        <Box className={menu === false ? "navMenu navActive" : "navMenu"} onClick={() => {
-                setMenu(!menu);
-              }} >
+        <Box
+          className={menu === false ? "navMenu navActive" : "navMenu"}
+          onClick={() => {
+            setMenu(!menu);
+          }}
+        >
           <Typography className="category">
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth sx={{ margin: "7px 0px" }}>
@@ -169,17 +172,27 @@ const Navbar = ({
         </Box>
 
         <Typography className="bar">
-          <IconButton>
-            <MenuSharpIcon
-              className="menuBar"
-              onClick={() => {
-                setMenu(!menu);
-              }}
-            />
-          </IconButton>
-          <IconButton>
-            <CloseIcon className="closeBar" />
-          </IconButton>
+          <Box
+            className={menu === false ? "activeMenu" : "menuBar"}
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          >
+            <IconButton>
+              <MenuSharpIcon sx={{ color: "white" }} />
+            </IconButton>
+          </Box>
+
+          <Box
+            className={menu === false ? "closeBar" : "activeMenu"}
+            onClick={() => {
+              setMenu(!menu);
+            }}
+          >
+            <IconButton>
+              <CloseIcon sx={{ color: "red" }} />
+            </IconButton>
+          </Box>
         </Typography>
       </Toolbar>
     </AppBar>

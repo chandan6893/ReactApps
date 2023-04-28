@@ -27,9 +27,7 @@
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
-    /* position: fixed;
-    right: 15rem;
-    top:36px; */
+   
 }
 .loginBtn{
     background-color:gray;
@@ -40,14 +38,14 @@
     font-weight: 500;
     border-radius: 4px;
     cursor: pointer;
-    /* position: fixed;
-    right: 15rem;
-    top:36px; */
+   
 }
-.userName{
-    /* top: 8px;
-    position: fixed;
-    right: 13.3rem; */
+
+.bar{
+    display: none;
+}
+.menuBar,.closeBar{
+    display: none;
 }
 
 .navInBox{
@@ -57,11 +55,16 @@
     gap: 1rem;
     margin-left: -210px;
 }
-.menuBar,.closeBar {
-    display: none;
+
+.navMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
 }
 
-@media only screen and (max-width:920px) {
+
+@media only screen and (max-width:1120px) {
     .navMenu{
         display: flex;
         flex-direction: column;
@@ -69,10 +72,11 @@
         align-items: center;
         position: absolute;
         top: 100%;
+        gap: 3.5rem;
         left: 0;
-        background-color: blueviolet;
-        width: 50%;
-        height: 50vh;
+        background-color:#448cd4;
+        width: 40%;
+        height: 100vh;
         transform: translateX(-100%);
         overflow: hidden;
         transition: all .4s ease-in;
@@ -81,67 +85,24 @@
     .navActive{
         transform: translateX(0);
     }
-    .loginLogout{
-        padding: 30px 0 30px 0;
-    }
-    .menuBar{
+   
+    .bar{
         display: block;
     }
-}
-
-/* responsive css codes */
-/* @media (max-width:414px){
-    
-    .appBar{
-        height: 7.2rem;
+    .menuBar,.closeBar{
+        display: block;
     }
-    .searchIcon{
-    display: none;
-}
-.searchContent{
+    .activeMenu{
+        display: none;
+    }
+    .searchContent{
     height: 1.6rem;
-    width: 22.6rem;
+    width: 13rem;
     padding:0.2rem 1rem;
     font-size: large;
     border: none;
     outline: none;
     border-radius: 0.1rem;
-}
-.inputNdIconContainer {
-    left: -25%;
-    right: -55%;
-    top: 65%;
-}
-.cart{
-   left: -71%;
-}
-.loginLogout{
-   display: none;
 }
 }
 
-@media (min-width:414px) and (max-width:820px){
-   
-    .inputNdIconContainer {
-    left:24%;
-    position: fixed;
-}
-.searchContent{
-    height: 1.6rem;
-    width: 16rem;
-    padding:0.2rem 1rem;
-    font-size: large;
-    border: none;
-    outline: none;
-    border-radius: 0.1rem;
-}
-.cart{
-   right: -4%;
-}
-.loginLogout{
-   display: none;
-}
-.category{
-    display: none;
-}
-} */

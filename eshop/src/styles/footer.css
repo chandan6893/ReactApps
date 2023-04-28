@@ -11,6 +11,7 @@
   width: 1340px;
     top: 286%;
     left: 0%;
+    margin-top: 1rem;
   }
   li,h3{
     cursor: pointer;
@@ -40,7 +41,7 @@ ul li{
 }
 
 /* responsive footer */
-/* @media  (max-width:414px){
+@media  (max-width:414px){
   .footer{
   background-color:#172337;
   display: grid;
@@ -53,13 +54,14 @@ ul li{
   position: absolute;
   height: 157px;
   width: 414px;
-    top: 1081%;
+    top: 1078%;
     left: 0%;
     overflow: hidden;
+    display: none;
   }
-} */
+} 
 
-/* @media (min-width:414px) and (max-width:820px){
+ @media (min-width:414px) and (max-width:820px){
  .footer{
   background-color:#172337;
   display: flex;
@@ -71,8 +73,9 @@ ul li{
   position: absolute;
   height: 170px;
   width: 1340px;
-    top: 1000%;
+    top: 910%;
     left: 0%;
     overflow: hidden;
+    display: none;
   } 
-} */
+}

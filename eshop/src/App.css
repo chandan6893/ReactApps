@@ -10,3 +10,16 @@ body{
   margin-top: 4.59rem;
   height: 100%;
 }
+@media only screen and (max-width:840px) {
+  section{
+  position: relative;
+}
+.carousel{
+  position: absolute;
+  width: auto;
+  margin-top: 555%;
+}
+
+ 
+  
+}
