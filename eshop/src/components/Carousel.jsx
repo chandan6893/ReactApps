@@ -20,6 +20,7 @@ export const Carousel = ({ slides }) => {
       {slides.map((img, index) => {
         return (
           <img
+          key={index}
             src={img.src}
             alt={img.alt}
             className={slideImg === index ? "slideImg" : "slide-hidden"}

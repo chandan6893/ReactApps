@@ -68,7 +68,7 @@ const Navbar = ({
           eshop
         </Typography>
 
-        <Typography className="inputNdIconContainer">
+        <Box className="inputNdIconContainer">
           <input
             type="text"
             placeholder="Search here..."
@@ -77,14 +77,14 @@ const Navbar = ({
             onChange={(e) => handleSearch(e.target.value)}
           />
           <i className="fa-solid fa-magnifying-glass fa-beat-fade searchIcon"></i>
-        </Typography>
+        </Box>
         <Box
           className={menu === false ? "navMenu navActive" : "navMenu"}
           onClick={() => {
             setMenu(!menu);
           }}
         >
-          <Typography className="category">
+          <Box className="category">
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth sx={{ margin: "7px 0px" }}>
                 <InputLabel id="demo-simple-select-label">Category</InputLabel>
@@ -127,8 +127,8 @@ const Navbar = ({
                 </Select>
               </FormControl>
             </Box>
-          </Typography>
-          <Typography className="loginLogout" sx={{ position: "relative" }}>
+          </Box>
+          <Box className="loginLogout" sx={{ position: "relative" }}>
             {isAuthenticated && (
               <Typography className="userName">
                 <span>{user.name}</span>
@@ -158,7 +158,7 @@ const Navbar = ({
                 </button>
               </Typography>
             )}
-          </Typography>
+          </Box>
 
           <IconButton className="cart" onClick={() => setShow(false)}>
             <AddShoppingCartIcon sx={{ color: "white", fontSize: "2.5rem" }} />
@@ -171,7 +171,7 @@ const Navbar = ({
           </IconButton>
         </Box>
 
-        <Typography className="bar">
+        <Box className="bar">
           <Box
             className={menu === false ? "activeMenu" : "menuBar"}
             onClick={() => {
@@ -193,7 +193,7 @@ const Navbar = ({
               <CloseIcon sx={{ color: "red" }} />
             </IconButton>
           </Box>
-        </Typography>
+        </Box>
       </Toolbar>
     </AppBar>
   );
