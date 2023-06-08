@@ -33,7 +33,7 @@ function Cart({ cart, setCart, handleIncDecItemInCart }) {
             <button onClick={() => handleIncDecItemInCart(item, -1)}>-</button>
           </div>
           <div>
-            <span>₹{item.price}</span>
+            <span>₹{item.amount * item.price}</span>
             <button onClick={() => handleRemove(item.id)}>remove</button>
           </div>
         </div>

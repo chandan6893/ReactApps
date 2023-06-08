@@ -89,7 +89,7 @@ export default function Highlights() {
                   Language
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Hindi,Englishand many more regional languages
+                  Hindi,English
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -110,7 +110,7 @@ export default function Highlights() {
                   Religion
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Hinduism,Islam,Christinity and others
+                  Hinduism,Islam
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -131,7 +131,7 @@ export default function Highlights() {
                   Population
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  136.64 crores (2019)
+                  136.64 crores 
                 </Typography>
               </CardContent>
             </CardActionArea>
