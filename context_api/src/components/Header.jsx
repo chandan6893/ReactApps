@@ -2,8 +2,11 @@ import React from 'react';
 import AppBar from "@mui/material/AppBar";
 import { Toolbar, Typography,Box } from '@mui/material';
 import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
+import { Link,useNavigate} from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <AppBar>
@@ -26,7 +29,7 @@ const Header = () => {
               </Typography>
             </Box>
             <Box>
-              <CollectionsBookmarkIcon sx={{ color: "#263238",fontSize:"40px",cursor:"pointer" }} />
+              <CollectionsBookmarkIcon sx={{ color: "#263238",fontSize:"40px",cursor:"pointer" }} onClick={()=>navigate("/")} />
             </Box>
           </Box>
         </Toolbar>
