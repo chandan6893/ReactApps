@@ -19,7 +19,7 @@ function App() {
           <Route path="/book/:id" element={BookDetails} />
         </Routes>
      
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
