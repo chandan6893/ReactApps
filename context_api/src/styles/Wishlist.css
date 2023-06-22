@@ -1,0 +1,42 @@
+.Booklist_book_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;text-align: center;
+    width: 300px;
+    /* height: 320px; */
+    /* gap: 25px; */
+    /* background-color: aliceblue; */
+    margin-bottom: 40px;
+}
+.Booklist_book_card h1{
+    height: 30px;
+    color: rosybrown;
+}
+.Booklist_book_image{
+    margin: 15px 0 0px 0;
+    width: 300px;
+    height: 280px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.BookList{
+    display: flex;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    column-gap: 20px;
+}
+.BookList_Wishlit_BTN{
+    width: 300px;
+    padding: 9px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: yellow;
+    color: darkblue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

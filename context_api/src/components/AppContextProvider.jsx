@@ -5,25 +5,33 @@ const API_URL = "https://example-data.draftbit.com/books?_limit=49";
 const context=createContext();
 const AppContextProvider = ({children}) => {
   const [books,setBooks]=useState([]);
-  const [addToWishlist,setAddToWishlist]=useState([]);
- const  [wishlist, setWishList] = useState([]);
+  const [favourates,setFavourates]=useState([]);
   
 
-// setWishList([...wishlist,addToWishlist]);
-// console.log(addToWishlist);
+
+
+  const fav=(book)=>{
+    setFavourates([...favourates,book])
+  }
+
+  const removeFun = (id) => {
+    // console.log(id)
+    const filteredFavBook = favourates.filter((favBook) => {
+      // console.log(favBook.id!==id)
+      return favBook.id !== id;
+      
+    });
+    setFavourates(filteredFavBook);
+  };
+
 
   useEffect(()=>{
     axios.get(API_URL).then(res=>setBooks(res.data))
   },[])
 
-  // const addToWishlit=(books)=>{
-  //   console.log(books);
-  //     }
   return (
     <div>
-      <context.Provider
-        value={{ books, addToWishlist,setAddToWishlist,wishlist, setWishList }}
-      >
+      <context.Provider value={{ books, fav, favourates, removeFun }}>
         {children}
       </context.Provider>
     </div>
