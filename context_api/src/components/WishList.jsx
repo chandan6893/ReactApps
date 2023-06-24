@@ -13,7 +13,7 @@ const { favourates, removeFun } = useGlobalContext();
   
 
   return (
-    <div className="BookList">
+    <div style={{marginBottom:"600px"}} className="BookList">
       {favourates.map((favBook) => {
         return (
           <div key={favBook.id} className="Booklist_book_card">
