@@ -11,7 +11,7 @@ const Footer = () => {
           alignItems: "center",
           backgroundColor: "#1a237e",
           width:"100%",
-          height:"20vh",
+          height:"10vh",
         }}
       >
         <Box>
