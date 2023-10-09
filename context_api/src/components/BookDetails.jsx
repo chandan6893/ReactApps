@@ -1,10 +1,12 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import "../styles/BookDetails.css";
+import { useGlobalContext } from "./AppContextProvider";
 
 export const BookDetails = () => {
+  const { fav } = useGlobalContext();
   const location=useLocation();
-  console.log(location.state.book)
+  // console.log(location.state.book)
   return (
     <div className="bookDetails">
       <div className="bookDetails_Content_Container">
@@ -14,6 +16,12 @@ export const BookDetails = () => {
             src={location.state.book.image_url}
             alt=""
           />
+          <button
+            className="BookList_Wishlit_BTN"
+            onClick={() => fav(location.state.book)}
+          >
+            Add To Wishlist
+          </button>
         </div>
         <div className="bookDetails_Details">
           <h3 className="bookDetails_Title">{location.state.book.title}</h3>

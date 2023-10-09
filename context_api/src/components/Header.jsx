@@ -4,6 +4,7 @@ import { Toolbar, Typography,Box } from '@mui/material';
 import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
 import { Link,useNavigate} from 'react-router-dom';
 import { useGlobalContext } from "./AppContextProvider";
+import SearchBooks from './SearchBooks';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -36,6 +37,9 @@ const Header = () => {
               <Typography variant="span" sx={{ color: "lightgreen" }}>
                 Shop
               </Typography>
+            </Box>
+            <Box>
+              <SearchBooks />
             </Box>
             <Box>
               <CollectionsBookmarkIcon

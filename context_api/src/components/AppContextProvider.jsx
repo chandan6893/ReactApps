@@ -6,6 +6,8 @@ const context=createContext();
 const AppContextProvider = ({children}) => {
   const [books,setBooks]=useState([]);
   const [favourates,setFavourates]=useState([]);
+
+  const [searchResult, setSearchResult] = useState([]);
   
 
 
@@ -31,7 +33,7 @@ const AppContextProvider = ({children}) => {
 
   return (
     <div>
-      <context.Provider value={{ books, fav, favourates, removeFun }}>
+      <context.Provider value={{ books, fav, favourates, removeFun,searchResult, setSearchResult }}>
         {children}
       </context.Provider>
     </div>
