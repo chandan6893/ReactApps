@@ -1,0 +1,24 @@
+.HeaderContainerA{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+   
+}
+.HeaderTitleContainer{
+ /* position: relative; */
+}
+
+@media only screen and (max-width: 750px)  {
+    /* .HeaderContainerA{
+    flex-direction: column;
+} */
+.HeaderContainerA{
+ height: 10rem;
+}
+.SearchBooksContainer{
+position: absolute;
+top: 70%;
+left: 12%;
+}
+}

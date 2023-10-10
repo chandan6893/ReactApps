@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { useGlobalContext } from "./AppContextProvider";
 import { useNavigate } from "react-router-dom";
-
+import "../styles/SearchBooks.css";
 const SearchBooks = () => {
     const { books, setSearchResult, searchResult } = useGlobalContext();
 
@@ -15,16 +15,16 @@ const SearchBooks = () => {
           return inputValue && book && book.title && book.title.toLowerCase().includes(inputValue)
         });
         setSearchResult(results);
-    }
+        
+   }
 
-    
-
-    // console.log(search);
+     // console.log(search);
   return (
-    <div style={{ width: "25rem" }}>
+    <div style={{ width: "28rem" }}>
       <div>
         <input
-          style={{ width: "25rem" ,height:"2rem", padding:"0 10px 0 20px" }}
+        className='SearchBooksInputTag'
+          
           value={search}
           type="text"
           placeholder="search..."
@@ -37,42 +37,35 @@ const SearchBooks = () => {
           position: "absolute",
           zIndex: "100",
           backgroundColor: "darkblue",
-          width:"25rem",
-          display:"flex",
-          justifyContent:"center",
-          alignItems:"center"
+          maxWidth: "28rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        {searchResult.length > 0 ? (
-          <div>
-            {searchResult.map((item, ind) => {
-              return (
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    margin: "10px",
-                  }}
-                  key={ind}
-                >
-                  <img
-                    src={item.image_url}
-                    height="36px"
-                    alt=""
-                    onClick={() =>
-                      navigate(`/books/BookDetails/${item.id}`, {
-                        state: { book: item },
-                      })
-                    }
-                  />
-                  <h3>{item.title}</h3>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          ""
-        )}
+        <div>
+          {searchResult.map((item, ind) => {
+            return (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  margin: "10px",
+                }}
+                key={ind}
+                onClick={() =>
+                  navigate(`/books/BookDetails/${item.id}`, {
+                    state: { book: item },
+                  },setSearchResult([]),setSearch(""))
+                }
+              >
+                <img src={item.image_url} height="36px" alt="" />
+                <h3>{item.title}</h3>
+              </div>
+            );
+          })}
+        </div>
+
       </div>
     </div>
   );

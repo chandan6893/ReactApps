@@ -5,10 +5,12 @@ import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
 import { Link,useNavigate} from 'react-router-dom';
 import { useGlobalContext } from "./AppContextProvider";
 import SearchBooks from './SearchBooks';
+import "../styles/Header.css";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { addToWishlist, wishlist, setWishList } = useGlobalContext();
+  const { addToWishlist, wishlist, setWishList, favourates } =
+    useGlobalContext();
   const wishListFun = () => {
     navigate("/wishlist");
     // setWishList([...wishlist,addToWishlist]);
@@ -19,16 +21,14 @@ const Header = () => {
       <AppBar>
         <Toolbar>
           <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
+            
+            className="HeaderContainerA"
           >
             <Box
+            className='HeaderTitleContainer'
               component="h1"
               sx={{ cursor: "pointer" }}
+
               onClick={() => navigate("/")}
             >
               <Typography variant="span" sx={{ color: "#ffea00" }}>
@@ -38,10 +38,12 @@ const Header = () => {
                 Shop
               </Typography>
             </Box>
-            <Box>
+            <Box className="SearchBooksContainer">
               <SearchBooks />
             </Box>
-            <Box>
+            <Box className="BookmarkIconAndCountingBooksContainer">
+              {favourates.length > 0 ? <Box>{favourates.length}</Box> : ""}
+
               <CollectionsBookmarkIcon
                 sx={{ color: "#263238", fontSize: "40px", cursor: "pointer" }}
                 onClick={wishListFun}

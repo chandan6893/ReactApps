@@ -83,9 +83,6 @@ const BooksList = () => {
           </div>
         </div>
       ) : (
-        // <div style={{height:"80vh",textAlign:"center"}}>
-        //   <h1 style={{textAlign:"center",fontSize:"80px",marginTop:"200px"}} >Loading......</h1>
-        // </div>
         <div
           style={{
             height: "100vh",
