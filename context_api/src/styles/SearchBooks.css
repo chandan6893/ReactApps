@@ -1,12 +1,44 @@
 .SearchBooksInputTag{
     width: 28rem;
-    height: 2rem;
+    height: 2.2rem;
     padding: 0 10px 0 20px;
+    outline: none;
+    border: none;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    font-size:17px;
 }
- 
+.SearchBooksSearchedResultsContainer{
+position: absolute;
+z-index: 100;
+background-color: lightyellow;
+width: 28rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.SearchBooksSearchedResults{
+display: flex;
+align-items: center;
+margin: 10px;
+margin-left:80px;
+width: 28rem;
+cursor: pointer;
+}
+.SearchBooksSearchedResultsTitles{
+  color:black;
+  margin-left: 18px;
+  font-size: 15px;
+}
  @media only screen and (max-width: 650px)  {
           .SearchBooksInputTag{
             width: 24rem;
+          }
+          .SearchBooksSearchedResultsContainer{
+            width: 24rem;
+          }
+          .SearchBooksSearchedResults{
+            margin-left:180px;
           }
   }
 
@@ -14,9 +46,18 @@
         .SearchBooksInputTag{
             max-width: 18rem;
           }
+          .SearchBooksSearchedResultsContainer{
+            width: 18rem;
+          }
   }
    @media only screen and (max-width: 350px)  {
           .SearchBooksInputTag{
             width: 13rem;
+          }
+          .SearchBooksSearchedResultsContainer{
+            width: 13rem;
+          }
+          .SearchBooksSearchedResults{
+            margin-left:280px;
           }
   }

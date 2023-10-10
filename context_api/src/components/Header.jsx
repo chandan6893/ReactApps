@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       <AppBar>
-        <Toolbar>
+        <Toolbar className='HeaderToolbar'>
           <Box
             
             className="HeaderContainerA"
@@ -42,7 +42,7 @@ const Header = () => {
               <SearchBooks />
             </Box>
             <Box className="BookmarkIconAndCountingBooksContainer">
-              {favourates.length > 0 ? <Box>{favourates.length}</Box> : ""}
+              {favourates.length > 0 ? <Box className="HeaderTotalNoOfFavBooks" >{favourates.length}</Box> : ""}
 
               <CollectionsBookmarkIcon
                 sx={{ color: "#263238", fontSize: "40px", cursor: "pointer" }}

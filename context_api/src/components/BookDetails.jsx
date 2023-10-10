@@ -14,7 +14,7 @@ export const BookDetails = () => {
           <img
             className="bookDetailsImage"
             src={location.state.book.image_url}
-            alt=""
+            alt="Image Not Found"
           />
           <button
             className="BookList_Wishlit_BTN"

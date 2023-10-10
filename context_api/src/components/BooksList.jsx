@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Pagination from "@mui/material/Pagination";
 import CircularProgress from "@mui/material/CircularProgress";
 
+
 const BooksList = () => {
   const { books, fav, searchResult } = useGlobalContext();
   const navigate=useNavigate(); 
@@ -31,16 +32,13 @@ const BooksList = () => {
   return (
     <>
       {books.length > 0 ? (
-        <div style={{  position: "relative",zIndex:"10" }}>
-          
-
-          <div className="BookList">
+        <div className='BooksListContainerA'>
+           <div className="BookList">
             {(() => {
               const displayPosts = [];
 
               books.slice(startPageIndex,endPageIndex+1).map((book,ind)=>{
-
-                displayPosts.push(
+              displayPosts.push(
                   <div key={ind} className="Booklist_book_card">
                     <h1>{book.title}</h1>
                     <img
@@ -67,14 +65,7 @@ const BooksList = () => {
               return displayPosts;
             })()}
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginBottom: "25px",
-            }}
-          >
+          <div className='BooklsListPaginationContainer' >
             <Pagination
               count={totalPages}
               color="primary"
@@ -83,14 +74,7 @@ const BooksList = () => {
           </div>
         </div>
       ) : (
-        <div
-          style={{
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div className='BooksListLoader' >
           <div>
             {/* <CircularProgress /> */}
             <img src="https://i.gifer.com/WMDx.gif" style={{width:"200px"}} alt="" />

@@ -8,11 +8,7 @@ const WishList = () => {
 const { favourates, removeFun } = useGlobalContext();
 // console.log("fav", favourates);
 
-
-  
-  
-
-  return (
+return (
     <div style={{marginBottom:"600px"}} className="BookList">
       {favourates.map((favBook) => {
         return (

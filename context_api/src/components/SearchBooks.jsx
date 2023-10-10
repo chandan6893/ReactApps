@@ -23,8 +23,7 @@ const SearchBooks = () => {
     <div style={{ width: "28rem" }}>
       <div>
         <input
-        className='SearchBooksInputTag'
-          
+          className='SearchBooksInputTag'
           value={search}
           type="text"
           placeholder="search..."
@@ -32,35 +31,35 @@ const SearchBooks = () => {
         />
       </div>
 
-      <div
-        style={{
-          position: "absolute",
-          zIndex: "100",
-          backgroundColor: "darkblue",
-          maxWidth: "28rem",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className='SearchBooksSearchedResultsContainer'>
         <div>
           {searchResult.map((item, ind) => {
             return (
               <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  margin: "10px",
-                }}
+                className="SearchBooksSearchedResults"
+                
                 key={ind}
                 onClick={() =>
-                  navigate(`/books/BookDetails/${item.id}`, {
-                    state: { book: item },
-                  },setSearchResult([]),setSearch(""))
+                  navigate(
+                    `/books/BookDetails/${item.id}`,
+                    {
+                      state: { book: item },
+                    },
+                    setSearchResult([]),
+                    setSearch("")
+                  )
                 }
               >
                 <img src={item.image_url} height="36px" alt="" />
-                <h3>{item.title}</h3>
+                {item.title.length > 40 ? (
+                  <h3 className="SearchBooksSearchedResultsTitles">
+                    {item.title.substring(0,33)}....
+                  </h3>
+                ) : (
+                  <h3 className="SearchBooksSearchedResultsTitles">
+                    {item.title}
+                  </h3>
+                )}
               </div>
             );
           })}
