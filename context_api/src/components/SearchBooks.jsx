@@ -1,24 +1,42 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { useGlobalContext } from "./AppContextProvider";
 import { useNavigate } from "react-router-dom";
 import "../styles/SearchBooks.css";
 const SearchBooks = () => {
-    const { books, setSearchResult, searchResult } = useGlobalContext();
-
-    const [search,setSearch]=useState("");
+    const { books, setSearchResult, searchResult, search, setSearch } =useGlobalContext();
+    
+  
     const navigate = useNavigate(); 
 
     const handleSearch=(inputValue)=>{
         setSearch(inputValue);
-
+      if(inputValue==""){
+        setSearchResult([])
+      }
         const results = books.filter((book) => {
           return inputValue && book && book.title && book.title.toLowerCase().includes(inputValue)
         });
         setSearchResult(results);
         
+        
    }
 
-     // console.log(search);
+
+   const manageOutsideClick=(event)=>{
+    if (!event.target.closest(".SearchBooksSearchedResultsContainer") && !event.target.closest(".SearchBooksInputTag")) {
+      setSearchResult([]);
+    } 
+     event.stopPropagation();
+   }
+ useEffect(()=>{
+  document.addEventListener("click",manageOutsideClick);
+
+  return ()=>{
+    document.removeEventListener("click",manageOutsideClick);
+  }
+ },[])
+
+
   return (
     <div style={{ width: "28rem" }}>
       <div>
