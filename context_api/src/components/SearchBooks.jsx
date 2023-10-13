@@ -1,11 +1,9 @@
-import React,{useState,useEffect} from 'react';
+import React,{useEffect} from 'react';
 import { useGlobalContext } from "./AppContextProvider";
 import { useNavigate } from "react-router-dom";
 import "../styles/SearchBooks.css";
 const SearchBooks = () => {
     const { books, setSearchResult, searchResult, search, setSearch } =useGlobalContext();
-    
-  
     const navigate = useNavigate(); 
 
     const handleSearch=(inputValue)=>{
@@ -20,7 +18,6 @@ const SearchBooks = () => {
         
         
    }
-
 
    const manageOutsideClick=(event)=>{
     if (!event.target.closest(".SearchBooksSearchedResultsContainer") && !event.target.closest(".SearchBooksInputTag")) {

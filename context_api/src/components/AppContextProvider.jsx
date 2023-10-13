@@ -4,21 +4,18 @@ import axios from "axios";
 const API_URL = "https://example-data.draftbit.com/books?_limit=49";
 const context=createContext();
 const AppContextProvider = ({children}) => {
-  const [books,setBooks]=useState([]);
-  const [favourates,setFavourates]=useState([]);
-    const [search, setSearch] = useState("");
-  const [searchResult, setSearchResult] = useState([]);
+const [books,setBooks]=useState([]);
+const [favourates,setFavourates]=useState([]);
+const [search, setSearch] = useState("");
+const [searchResult, setSearchResult] = useState([]);
   
-
-
-
-  const fav=(book)=>{
+const fav=(book)=>{
     setFavourates([...favourates,book])
   }
 
-  const removeFun = (id) => {
+const removeFun = (id) => {
     // console.log(id)
-    const filteredFavBook = favourates.filter((favBook) => {
+const filteredFavBook = favourates.filter((favBook) => {
       // console.log(favBook.id!==id)
       return favBook.id !== id;
       

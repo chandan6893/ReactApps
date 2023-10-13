@@ -1,29 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AppBar from "@mui/material/AppBar";
 import { Toolbar, Typography,Box } from '@mui/material';
 import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
-import { Link,useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { useGlobalContext } from "./AppContextProvider";
 import SearchBooks from './SearchBooks';
 import "../styles/Header.css";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { addToWishlist, wishlist, setWishList, favourates } =
-    useGlobalContext();
+  const { favourates } = useGlobalContext();
   const wishListFun = () => {
     navigate("/wishlist");
-    // setWishList([...wishlist,addToWishlist]);
   };
 
   return (
     <>
       <AppBar>
         <Toolbar className='HeaderToolbar'>
-          <Box
-            
-            className="HeaderContainerA"
-          >
+          <Box className="HeaderContainerA" >
             <Box
             className='HeaderTitleContainer'
               component="h1"

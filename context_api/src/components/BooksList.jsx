@@ -7,19 +7,20 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 
 const BooksList = () => {
-  const { books, fav, searchResult } = useGlobalContext();
+  const { books, fav} = useGlobalContext();
   const navigate=useNavigate(); 
-
+  
+  // pagination
   const perPageRecords=8;
   const totalPageRecords=books.length;
   const totalPages=Math.ceil(totalPageRecords/perPageRecords)
  
   const [startPageIndex,setStartPageIndex]=useState(0);
   const [endPageIndex, setEndPageIndex] = useState(perPageRecords-1);
-  const [currentPage,setCurrentPage]=useState(1);
+  // const [currentPage,setCurrentPage]=useState(1);
       
   const displayPage=(pageNo)=>{
-    setCurrentPage(pageNo);
+    // setCurrentPage(pageNo);
     let start_page_index=perPageRecords*pageNo-perPageRecords;
     let end_page_index=perPageRecords*pageNo-1;
     setStartPageIndex(start_page_index);
@@ -29,6 +30,7 @@ const BooksList = () => {
       setEndPageIndex(end_page_index);
     }
   }
+
   return (
     <>
       {books.length > 0 ? (
